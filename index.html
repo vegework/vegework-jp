@@ -69,7 +69,7 @@ header {
 }
 .login-btn { padding: 11px 20px; }
 
-/* リニューアル告知ポップアップ */
+/* お知らせポップアップ（年末年始休業） */
 .renewal-pop {
   position: fixed; right: 24px; bottom: 24px; z-index: 200;
   width: min(360px, calc(100vw - 48px));
@@ -282,10 +282,10 @@ footer { background: var(--green-dark); color: #cfe0d5; padding: 48px 0 32px; fo
 
 <div class="renewal-pop" id="renewal-pop">
   <button class="pop-close" id="pop-close" aria-label="閉じる">×</button>
-  <span class="pop-badge">NEW</span>
-  <p class="pop-date">2026.08</p>
-  <p class="pop-title">公式サイトをリニューアルしました</p>
-  <p class="pop-body">このサイトは、デザイン・画像生成・コーディングまで、すべて<strong>AIを活用して自社で制作</strong>しました。vegework の開発にも、AIエージェントをフル活用しています。</p>
+  <span class="pop-badge">お知らせ</span>
+  <p class="pop-date">2026.10.22</p>
+  <p class="pop-title">年末年始休業のお知らせ</p>
+  <p class="pop-body"><strong>2026年12月27日(日)〜2027年1月3日(日)</strong>は、年末年始のため休業いたします。2027年1月4日(月)より通常どおり営業いたします。</p>
 </div>
 
 <section class="hero" id="top">
@@ -486,6 +486,7 @@ footer { background: var(--green-dark); color: #cfe0d5; padding: 48px 0 32px; fo
     <p class="sec-label reveal">News</p>
     <h2 class="sec-title reveal">ニュース</h2>
     <div class="news-list collapsed reveal" id="news-list">
+      <div class="news-item"><time>2026.10.22</time><p>年末年始休業のお知らせ：2026年12月27日(日)〜2027年1月3日(日)は、年末年始のため休業いたします。2027年1月4日(月)より通常どおり営業いたします。</p></div>
       <div class="news-item"><time>2026.08.01</time><p>オフィシャルサイトをリニューアルしました。このサイトは、デザイン・画像生成・コーディングまで、すべてAIを活用して自社で制作しました。</p></div>
       <div class="news-item"><time>2025.08.01</time><p>株式会社R&Cながの青果の上田本社が営業管理SaaSサービス「vegework」を導入いたしました。</p></div>
       <div class="news-item"><time>2024.06.11</time><p>「vegework」が採択したOCIを活用したフルマネージドクラウドサービス「デジテラス」に関するプレスリリースが配信されました。</p></div>
@@ -600,9 +601,9 @@ setInterval(() => {
   slideIdx = (slideIdx + 1) % slides.length;
   slides[slideIdx].classList.add('active');
 }, 6000);
-// リニューアル告知ポップアップ
+// お知らせポップアップ（年末年始休業・休業明けの 2027/1/4 からは出さない）
 const pop = document.getElementById('renewal-pop');
-setTimeout(() => pop.classList.add('show'), 1200);
+if (new Date() < new Date('2027-01-04T00:00:00+09:00')) setTimeout(() => pop.classList.add('show'), 1200);
 document.getElementById('pop-close').addEventListener('click', () => pop.classList.remove('show'));
 // お問い合わせフォーム送信
 const GAS_URL = 'https://script.google.com/macros/s/AKfycbxS1hMbuJWwm-0ShzYCUs8BY99HUB5rpEaFunsQifZGSY1bx5phSayqN12s_Yd1UbC8/exec';

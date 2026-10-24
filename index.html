@@ -210,8 +210,9 @@ header {
 
 /* column */
 #column { border-top: 1px solid var(--line); }
-.column-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-@media (max-width: 800px) { .column-cards { grid-template-columns: 1fr; } }
+.column-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+@media (max-width: 960px) { .column-cards { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 640px) { .column-cards { grid-template-columns: 1fr; } }
 .column-card { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--line); border-top: 4px solid var(--green); border-radius: 10px; padding: 32px; transition: box-shadow .3s ease, transform .3s ease; }
 a.column-card:hover { box-shadow: 0 12px 32px rgba(18,64,42,.12); transform: translateY(-2px); }
 .column-card .col-no { font-size: 12px; font-weight: 700; letter-spacing: .15em; color: var(--accent); }
@@ -512,6 +513,12 @@ footer { background: var(--green-dark); color: #cfe0d5; padding: 48px 0 32px; fo
         <p>ロボットなど、現実の世界で体を動かすAIは、青果市場の現場にいつ、どこから入ってくるのか。2026年の現状と業種ごとの広がり方から考えます。</p>
         <div class="col-meta"><time>2026.10.24</time>　代表取締役　一ツ木 崇之<br><span class="col-more">続きを読む →</span></div>
       </a>
+      <a class="column-card reveal" href="column-shijou-saihen.html">
+        <span class="col-no">COLUMN 03</span>
+        <h3>青果市場の統合・買収が相次ぐ今、10年後の勢力図はどうなるのか ― 国内編</h3>
+        <p>ここ数年、青果卸売市場で卸売会社の統合や買収が相次いでいます。国内の事例とその背景、医薬品卸の前例から、10年後の勢力図を考えます。</p>
+        <div class="col-meta"><time>2026.10.24</time>　代表取締役　一ツ木 崇之<br><span class="col-more">続きを読む →</span></div>
+      </a>
     </div>
   </div>
 </section>
@@ -521,6 +528,7 @@ footer { background: var(--green-dark); color: #cfe0d5; padding: 48px 0 32px; fo
     <p class="sec-label reveal">News</p>
     <h2 class="sec-title reveal">ニュース</h2>
     <div class="news-list collapsed reveal" id="news-list">
+      <div class="news-item"><time>2026.10.24</time><p>コラム「<a href="column-shijou-saihen.html" style="color:var(--green); text-decoration:underline;">青果市場の統合・買収が相次ぐ今、10年後の勢力図はどうなるのか（国内編）</a>」を公開しました。</p></div>
       <div class="news-item"><time>2026.10.24</time><p>コラム「<a href="column-physical-ai.html" style="color:var(--green); text-decoration:underline;">フィジカルAIが青果市場で人の代わりに働くまで、どのくらいかかるのか</a>」を公開しました。</p></div>
       <div class="news-item"><time>2026.10.24</time><p>コラム「<a href="column-eigyou-2030.html" style="color:var(--green); text-decoration:underline;">生成AIの誕生によって、2030年までに青果市場の営業はこう変わる</a>」を公開しました。</p></div>
       <div class="news-item"><time>2026.10.22</time><p>年末年始休業のお知らせ：2026年12月27日(日)〜2027年1月3日(日)は、年末年始のため休業いたします。2027年1月4日(月)より通常どおり営業いたします。</p></div>

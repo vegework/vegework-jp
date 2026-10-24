@@ -44,6 +44,15 @@ th { background: var(--green-pale); color: var(--green-dark); white-space: nowra
 .about { margin-top: 32px; background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 20px 24px; font-size: 14px; }
 .about p { font-size: 14px; margin: 0; }
 .about a { display: inline-block; margin-top: 8px; color: var(--green); font-weight: 700; white-space: nowrap; }
+.col-nav { margin-top: 48px; }
+.col-nav h2 { margin: 0 0 16px; font-size: 18px; }
+.col-nav ul { list-style: none; margin: 0; border-top: 1px solid var(--line); }
+.col-nav li { margin: 0; border-bottom: 1px solid var(--line); }
+.col-nav a, .col-nav .current { display: block; padding: 14px 4px; font-size: 14px; text-decoration: none; }
+.col-nav a:hover { color: var(--green); background: var(--green-pale); }
+.col-nav .no { display: block; font-size: 11px; font-weight: 700; letter-spacing: .15em; color: var(--accent); }
+.col-nav .current { color: var(--ink-soft); }
+.col-nav .current .here { font-size: 11px; font-weight: 700; color: var(--green); margin-left: 8px; }
 footer { background: var(--green-dark); color: #cfe0d5; padding: 40px 0; font-size: 13px; text-align: center; }
 footer p { color: #cfe0d5; font-size: 13px; margin: 0; }
 footer a { color: #fff; text-decoration: underline; margin: 0 10px; }
@@ -165,6 +174,15 @@ footer a { color: #fff; text-decoration: underline; margin: 0 10px; }
 <p>株式会社ベジワークは、青果卸売市場向けの営業管理SaaS「vegework」を開発・提供しています。市場ごとに異なる業務のやり方はそのままに、仕組みだけを変えることを目指しています。<br><a href="index.html#contact">お問い合わせはこちら →</a></p>
 </div>
 </article>
+
+<nav class="col-nav" aria-label="コラム一覧">
+  <h2>コラム一覧</h2>
+  <ul>
+    <li><a href="column-eigyou-2030.html"><span class="no">COLUMN 01</span>生成AIの誕生によって、2030年までに青果市場の営業はこう変わる ― 入力する人から、判断する人へ</a></li>
+    <li><a href="column-physical-ai.html"><span class="no">COLUMN 02</span>フィジカルAIが青果市場で人の代わりに働くまで、どのくらいかかるのか ― ロボットが荷を下ろす日の前に、市場がやっておくこと</a></li>
+    <li><span class="current"><span class="no">COLUMN 03</span>青果市場の統合・買収が相次ぐ今、10年後の勢力図はどうなるのか ― 国内編<span class="here">このページ</span></span></li>
+  </ul>
+</nav>
 </main>
 
 <footer>

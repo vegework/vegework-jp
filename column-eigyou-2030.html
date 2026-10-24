@@ -21,7 +21,7 @@ header { position: sticky; top: 0; z-index: 100; background: rgba(253,253,251,.9
 .logo { display: flex; align-items: center; gap: 12px; }
 .logo img { height: 34px; width: auto; }
 .back { font-size: 14px; font-weight: 700; color: var(--green); }
-main { padding: 64px 0 96px; }
+main.wrap { padding-top: 64px; padding-bottom: 96px; }
 .col-label { font-size: 13px; letter-spacing: .25em; color: var(--green); font-weight: 700; margin-bottom: 12px; }
 h1 { font-family: var(--serif); font-size: clamp(24px, 4.2vw, 34px); font-weight: 900; line-height: 1.5; }
 .subtitle { font-family: var(--serif); font-size: clamp(16px, 2.6vw, 20px); font-weight: 700; color: var(--green-dark); margin-top: 8px; }
@@ -42,7 +42,7 @@ th { background: var(--green-pale); color: var(--green-dark); white-space: nowra
 .sign { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--line); text-align: right; font-size: 14px; color: var(--ink-soft); }
 .about { margin-top: 32px; background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 20px 24px; font-size: 14px; }
 .about p { font-size: 14px; margin: 0; }
-.about a { color: var(--green); font-weight: 700; }
+.about a { display: inline-block; margin-top: 8px; color: var(--green); font-weight: 700; white-space: nowrap; }
 footer { background: var(--green-dark); color: #cfe0d5; padding: 40px 0; font-size: 13px; text-align: center; }
 footer p { color: #cfe0d5; font-size: 13px; margin: 0; }
 footer a { color: #fff; text-decoration: underline; margin: 0 10px; }
@@ -134,7 +134,7 @@ footer a { color: #fff; text-decoration: underline; margin: 0 10px; }
 <p class="sign">株式会社ベジワーク　代表取締役　一ツ木 崇之</p>
 
 <div class="about">
-<p>株式会社ベジワークは、青果卸売市場向けの営業管理SaaS「vegework」を開発・提供しています。市場ごとに異なる業務のやり方はそのままに、仕組みだけを変えることを目指しています。<a href="index.html#contact">お問い合わせはこちら</a></p>
+<p>株式会社ベジワークは、青果卸売市場向けの営業管理SaaS「vegework」を開発・提供しています。市場ごとに異なる業務のやり方はそのままに、仕組みだけを変えることを目指しています。<br><a href="index.html#contact">お問い合わせはこちら →</a></p>
 </div>
 </article>
 </main>

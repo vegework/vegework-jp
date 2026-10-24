@@ -208,6 +208,20 @@ header {
 .result-card h3 { font-family: var(--serif); font-size: 20px; margin-bottom: 14px; }
 .result-card .badge { display: inline-block; font-size: 12px; font-weight: 700; color: var(--accent); border: 1px solid var(--accent); border-radius: 999px; padding: 3px 14px; }
 
+/* column */
+#column { border-top: 1px solid var(--line); }
+.column-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+@media (max-width: 800px) { .column-cards { grid-template-columns: 1fr; } }
+.column-card { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--line); border-top: 4px solid var(--green); border-radius: 10px; padding: 32px; transition: box-shadow .3s ease, transform .3s ease; }
+a.column-card:hover { box-shadow: 0 12px 32px rgba(18,64,42,.12); transform: translateY(-2px); }
+.column-card .col-no { font-size: 12px; font-weight: 700; letter-spacing: .15em; color: var(--accent); }
+.column-card h3 { font-family: var(--serif); font-size: 19px; line-height: 1.6; margin: 8px 0 12px; }
+.column-card p { font-size: 13px; color: var(--ink-soft); }
+.column-card .col-meta { margin-top: auto; padding-top: 20px; font-size: 12px; color: var(--ink-soft); }
+.column-card .col-more { font-size: 13px; font-weight: 700; color: var(--green); }
+.column-card.soon { border-top-color: var(--line); }
+.column-card.soon .badge { align-self: flex-start; font-size: 12px; font-weight: 700; color: var(--accent); border: 1px solid var(--accent); border-radius: 999px; padding: 3px 14px; margin-top: auto; }
+
 /* news */
 .news-list { border-top: 1px solid var(--line); }
 .news-item { display: grid; grid-template-columns: 110px 1fr; gap: 24px; padding: 20px 4px; border-bottom: 1px solid var(--line); font-size: 14px; }
@@ -481,11 +495,33 @@ footer { background: var(--green-dark); color: #cfe0d5; padding: 48px 0 32px; fo
   </div>
 </section>
 
+<section id="column">
+  <div class="wrap">
+    <p class="sec-label reveal">Column</p>
+    <h2 class="sec-title reveal">コラム</h2>
+    <div class="column-cards">
+      <a class="column-card reveal" href="column-eigyou-2030.html">
+        <span class="col-no">COLUMN 01</span>
+        <h3>生成AIの誕生によって、2030年までに青果市場の営業はこう変わる ― 入力する人から、判断する人へ</h3>
+        <p>電話・FAX・転記といった「入力と照合」の仕事は大きく減り、営業担当者の仕事は「AIの下書きを確かめ、例外を判断し、取引先と数字で話す」ことへ移ります。</p>
+        <div class="col-meta"><time>2026.10.24</time>　代表取締役　一ツ木 崇之<br><span class="col-more">続きを読む →</span></div>
+      </a>
+      <div class="column-card soon reveal">
+        <span class="col-no">COLUMN 02</span>
+        <h3>フィジカルAIが青果市場で人の代わりに働くまで、どのくらいかかるのか</h3>
+        <p>ロボットなど、現実の世界で体を動かすAIは、青果市場の現場にいつ、どこから入ってくるのか。</p>
+        <span class="badge">近日公開</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="company" id="news">
   <div class="wrap">
     <p class="sec-label reveal">News</p>
     <h2 class="sec-title reveal">ニュース</h2>
     <div class="news-list collapsed reveal" id="news-list">
+      <div class="news-item"><time>2026.10.24</time><p>コラム「<a href="column-eigyou-2030.html" style="color:var(--green); text-decoration:underline;">生成AIの誕生によって、2030年までに青果市場の営業はこう変わる</a>」を公開しました。</p></div>
       <div class="news-item"><time>2026.10.22</time><p>年末年始休業のお知らせ：2026年12月27日(日)〜2027年1月3日(日)は、年末年始のため休業いたします。2027年1月4日(月)より通常どおり営業いたします。</p></div>
       <div class="news-item"><time>2026.08.01</time><p>オフィシャルサイトをリニューアルしました。このサイトは、デザイン・画像生成・コーディングまで、すべてAIを活用して自社で制作しました。</p></div>
       <div class="news-item"><time>2025.08.01</time><p>株式会社R&Cながの青果の上田本社が営業管理SaaSサービス「vegework」を導入いたしました。</p></div>

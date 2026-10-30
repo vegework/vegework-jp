@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>青果市場の価格登録・承認システム｜売値と利益をその場で確かめる ― vegework | 株式会社ベジワーク</title>
+<meta name="description" content="青果卸売市場の価格登録を、紙や Excel からシステムへ。売値と仕切値を入れると利益をその場で計算し、参考価格で値付けを後押し、上長の承認も画面で行える営業管理システム「vegework」の価格登録・承認の機能を紹介します。">
+<link rel="canonical" href="https://vegework.jp/kakaku-system.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="株式会社ベジワーク">
+<meta property="og:title" content="青果市場の価格登録・承認システム｜売値と利益をその場で確かめる ― vegework | 株式会社ベジワーク">
+<meta property="og:description" content="青果卸売市場の価格登録を、紙や Excel からシステムへ。売値と仕切値を入れると利益をその場で計算し、参考価格で値付けを後押し、上長の承認も画面で行える営業管理システム「vegework」の価格登録・承認の機能を紹介します。">
+<meta property="og:url" content="https://vegework.jp/kakaku-system.html">
+<meta property="og:image" content="https://vegework.jp/assets/img/ogp.jpg">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "青果市場の価格登録・承認システム ― 売値と利益をその場で確かめる",
+  "description": "青果卸売市場の価格登録を、紙や Excel からシステムへ。売値と仕切値を入れると利益をその場で計算し、参考価格で値付けを後押し、上長の承認も画面で行える営業管理システム「vegework」の価格登録・承認の機能を紹介します。",
+  "datePublished": "2026-10-30",
+  "dateModified": "2026-10-30",
+  "image": "https://vegework.jp/assets/img/ogp.jpg",
+  "mainEntityOfPage": "https://vegework.jp/kakaku-system.html",
+  "author": {
+   "@type": "Organization",
+   "name": "株式会社ベジワーク"
+  },
+  "publisher": {
+   "@type": "Organization",
+   "name": "株式会社ベジワーク",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://vegework.jp/assets/img/icon.png"
+   }
+  }
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "手数料や経費の計算は、市場独自のやり方に合わせられますか？",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "はい。荷主や買人ごとの手数料、配送などの経費の計算のしかたを伺い、貴社のルールに合わせて設定・開発します。"
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "承認の段階や権限は変えられますか？",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "標準は一次・二次の2段階の承認です。誰がどの段階を承認するかは、権限として設定できます。運用に合わせた変更もご相談ください。"
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "その場で売値が決まらない荷はどうなりますか？",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "売値を空欄のまま確定すると、承認後に販売保留として残ります。売値が決まったときに入れて確定でき、一部の買人の分だけ先に確定することもできます。"
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "参考価格はどのように計算していますか？",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "同じ買人・同じ品目・同じ等階級の直近の販売実績をもとに、入力中の仕切値に過去の売値と仕切値の割合を掛けて計算します。仕切値と経費から計算した損益分岐を下回らないよう、自動で引き上げます。"
+    }
+   }
+  ]
+ }
+]
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@700;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/img/icon.png">
+<style>
+:root { --green: #1a5c3a; --green-dark: #12402a; --green-pale: #eaf2ec; --ink: #1f2a24; --ink-soft: #55635b; --bg: #fdfdfb; --line: #dde4de; --accent: #c8842c; --serif: "Noto Serif JP", serif; --sans: "Noto Sans JP", sans-serif; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: var(--sans); color: var(--ink); background: var(--bg); line-height: 1.9; word-break: auto-phrase; }
+a { color: inherit; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+header { position: sticky; top: 0; z-index: 100; background: rgba(253,253,251,.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: 68px; max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+.nav a { text-decoration: none; }
+.logo { display: flex; align-items: center; gap: 12px; }
+.logo img { height: 34px; width: auto; }
+.back { font-size: 14px; font-weight: 700; color: var(--green); }
+main.wrap { padding-top: 64px; padding-bottom: 96px; }
+.col-label { font-size: 13px; letter-spacing: .25em; color: var(--green); font-weight: 700; margin-bottom: 12px; }
+h1 { font-family: var(--serif); font-size: clamp(24px, 4.2vw, 34px); font-weight: 900; line-height: 1.5; }
+.subtitle { font-family: var(--serif); font-size: clamp(16px, 2.6vw, 20px); font-weight: 700; color: var(--green-dark); margin-top: 8px; }
+.meta { margin: 24px 0 40px; padding-bottom: 24px; border-bottom: 1px solid var(--line); font-size: 13px; color: var(--ink-soft); }
+.lead { background: var(--green-pale); border-left: 4px solid var(--green); padding: 20px 24px; margin-bottom: 40px; }
+.lead p { margin: 0; font-weight: 500; }
+h2 { font-family: var(--serif); font-size: clamp(19px, 3vw, 23px); font-weight: 700; color: var(--green-dark); line-height: 1.6; margin: 56px 0 16px; }
+h2 .no { color: var(--accent); margin-right: 8px; }
+p, li, td, th { font-size: 15px; }
+p { margin-bottom: 18px; }
+ul, ol { margin: 0 0 18px 1.4em; }
+li { margin-bottom: 8px; }
+strong { color: var(--green-dark); }
+article li a, article p a { color: var(--green); font-weight: 700; }
+.table-wrap { overflow-x: auto; margin: 8px 0 24px; }
+table { width: 100%; min-width: 520px; border-collapse: collapse; }
+th, td { border: 1px solid var(--line); padding: 10px 14px; text-align: left; vertical-align: top; }
+th { background: var(--green-pale); color: var(--green-dark); white-space: nowrap; }
+td:first-child { white-space: nowrap; }
+.sign { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--line); text-align: right; font-size: 14px; color: var(--ink-soft); }
+.about { margin-top: 32px; background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 20px 24px; font-size: 14px; }
+.about p { font-size: 14px; margin: 0; }
+.about a { display: inline-block; margin-top: 8px; color: var(--green); font-weight: 700; white-space: nowrap; }
+.col-nav { margin-top: 48px; }
+.col-nav h2 { margin: 0 0 16px; font-size: 18px; }
+.col-nav ul { list-style: none; margin: 0; border-top: 1px solid var(--line); }
+.col-nav li { margin: 0; border-bottom: 1px solid var(--line); }
+.col-nav a, .col-nav .current { display: block; padding: 14px 4px; font-size: 14px; text-decoration: none; }
+.col-nav a:hover { color: var(--green); background: var(--green-pale); }
+.col-nav .no { display: block; font-size: 11px; font-weight: 700; letter-spacing: .15em; color: var(--accent); }
+.col-nav .current { color: var(--ink-soft); }
+.col-nav .current .here { font-size: 11px; font-weight: 700; color: var(--green); margin-left: 8px; }
+ol.flow { counter-reset: none; }
+.faq h3 { font-size: 16px; font-weight: 700; color: var(--green-dark); margin: 28px 0 8px; }
+footer { background: var(--green-dark); color: #cfe0d5; padding: 40px 0; font-size: 13px; text-align: center; }
+footer p { color: #cfe0d5; font-size: 13px; margin: 0; }
+footer a { color: #fff; text-decoration: underline; margin: 0 10px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="logo" href="/"><img src="assets/img/logo.svg" alt="vegework"></a>
+    <a class="back" href="/">← トップページへ戻る</a>
+  </div>
+</header>
+
+<main class="wrap">
+<article>
+<p class="col-label">FEATURE</p>
+<h1>青果市場の価格登録・承認システム</h1>
+<p class="subtitle">― 売値と利益をその場で確かめる</p>
+<p class="meta"><time datetime="2026-10-30">2026.10.30</time>　株式会社ベジワーク</p>
+
+<div class="lead">
+<p>青果卸売市場の価格登録は、買人への売値と産地への仕切値を決め、その差で利益が決まる大事な業務です。本ページでは、価格登録の業務と現場の課題、システムにするときのポイント、そしてベジワークの営業管理システム「vegework」の価格登録と承認の画面でできることを紹介します。</p>
+</div>
+
+<h2><span class="no">01</span>価格登録とは</h2>
+<p>価格登録とは、分荷した荷について、買人へ売る値段（売値）と、産地へ支払う値段（仕切値）を決めて記録する業務です。相対取引やせりで決まった売値を買人ごとに入れ、荷口の仕切値を決めます。</p>
+<p>売上から仕切の金額を差し引き、さらに手数料や配送などの経費を加減したものが、その荷口の利益になります。価格登録は、市場の利益が決まる場面そのものだといえます。</p>
+
+<h2><span class="no">02</span>価格登録の現場の課題</h2>
+<ul>
+<li><strong>利益が月末までわからない。</strong>売値と仕切値を紙に書き、集計はあとで経理が行う――。その荷口でいくら利益が出たのかを、値を決めたその場では確かめられません。</li>
+<li><strong>値付けが担当者ひとりに任されている。</strong>売値の判断材料が担当者の経験と記憶にしかなく、ほかの人が確かめにくい状態になりがちです。</li>
+<li><strong>手数料や経費の計算が手作業。</strong>荷主や買人ごとに違う手数料や経費を、電卓や Excel で計算していると、時間がかかるうえに間違いも起きます。</li>
+<li><strong>上長の確認が紙の回覧。</strong>価格の確認や押印を紙で回すと、確認が遅れ、どこで止まっているかも見えにくくなります。</li>
+<li><strong>その場で決まらない売値がある。</strong>買人との交渉が続くなど、売値がすぐに決まらない荷の扱いが、管理の抜けにつながります。</li>
+</ul>
+
+<h2><span class="no">03</span>価格登録をシステムにするときのポイント</h2>
+<ol>
+<li><strong>その場で利益が見えるか。</strong>売値と仕切値を入れたときに、手数料や経費を差し引いた利益がすぐにわかることが、利益を守る第一歩です。</li>
+<li><strong>値付けの判断材料があるか。</strong>過去の実績をもとにした目安があれば、担当者の経験だけに頼らずに値を決められます。</li>
+<li><strong>確認と承認の流れがあるか。</strong>上長がどの荷口を確認すべきかが画面でわかり、承認や差し戻しがその場でできると、確認の遅れがなくなります。</li>
+<li><strong>決まらない売値を後から入れられるか。</strong>保留にしておき、決まったときに確定できる仕組みがあると、抜けや漏れを防げます。</li>
+</ol>
+
+<h2><span class="no">04</span>vegework の価格登録の画面でできること</h2>
+<ul>
+<li><strong>未処理の荷口を一覧で。</strong>分荷から送られた荷口は、価格が確定するまで一覧に残ります。入れ忘れの荷口がひと目でわかります。</li>
+<li><strong>売値と仕切値を入れると、利益をその場で計算。</strong>買人ごとの売値と荷口の仕切値を入れると、手数料や経費を自動で計算し、その荷口の利益がすぐに表示されます。</li>
+<li><strong>参考価格で、値付けを後押し。</strong>同じ買人・同じ品目・同じ等階級の直近の販売実績をもとに、目安となる売値を表示します。仕切値と経費から計算した損益分岐を下回らないよう自動で引き上げ、引き上げたときはその理由も表示します。</li>
+<li><strong>仮仕切と本仕切。</strong>仕切値を仮に置いて後から入れ直すことも、本仕切として確定させることもできます。</li>
+<li><strong>段仕切。</strong>1つの等階級の中で数量を分け、別の単価で仕切れます。一部が傷んでいて売り物にならなかったときなどに使えます。</li>
+<li><strong>売値を後から確定（販売保留）。</strong>その場で決まらない売値は保留にしておき、決まったときに入れて確定できます。一部の買人の分だけ先に確定することもできます。</li>
+<li><strong>上長の承認を画面で。</strong>確定した荷口は、一次・二次の2段階で上長が承認します。担当者は上長へのメッセージを添えられ、上長は差し戻しの理由を書いて戻せます。一覧から続けて承認でき、紙をめくりながら押印するような感覚で進められます。承認が終わると原票が確定します。</li>
+<li><strong>次の工程へ。</strong>承認が終わった荷口は、仕切票や販売票の出力へとつながります。</li>
+</ul>
+<p>分荷から価格登録までの流れは、<a href="bunka-system.html">青果市場の分荷システム</a>のページ、業務全体の流れは<a href="seika-shijou-system.html">青果市場システムとは？</a>のページで紹介しています。</p>
+
+<h2><span class="no">05</span>導入の進め方</h2>
+<p>手数料や経費の計算のしかた、承認の流れは、市場ごとに違います。vegework の導入では、ヒアリングと視察で今のやり方を確かめたうえで、貴社のルールに合わせて設定・開発します。紙や Excel で運用している場合も、業務ごとに段階的に移していけます。</p>
+
+<h2><span class="no">06</span>よくある質問</h2>
+<div class="faq">
+<h3>Q. 手数料や経費の計算は、市場独自のやり方に合わせられますか？</h3>
+<p>はい。荷主や買人ごとの手数料、配送などの経費の計算のしかたを伺い、貴社のルールに合わせて設定・開発します。</p>
+<h3>Q. 承認の段階や権限は変えられますか？</h3>
+<p>標準は一次・二次の2段階の承認です。誰がどの段階を承認するかは、権限として設定できます。運用に合わせた変更もご相談ください。</p>
+<h3>Q. その場で売値が決まらない荷はどうなりますか？</h3>
+<p>売値を空欄のまま確定すると、承認後に販売保留として残ります。売値が決まったときに入れて確定でき、一部の買人の分だけ先に確定することもできます。</p>
+<h3>Q. 参考価格はどのように計算していますか？</h3>
+<p>同じ買人・同じ品目・同じ等階級の直近の販売実績をもとに、入力中の仕切値に過去の売値と仕切値の割合を掛けて計算します。仕切値と経費から計算した損益分岐を下回らないよう、自動で引き上げます。</p>
+</div>
+
+<div class="about">
+<p>価格登録や承認の流れのシステム化について、お気軽にご相談ください。資料のご請求も承っています。<br><a href="/#contact">資料請求・お問い合わせはこちら →</a></p>
+</div>
+</article>
+
+<nav class="col-nav" aria-label="関連ページ">
+  <h2>関連ページ</h2>
+  <ul>
+    <li><a href="seika-shijou-system.html"><span class="no">GUIDE</span>青果市場システムとは？ ― 青果卸売市場の業務と、システムの選び方</a></li>
+    <li><a href="bunka-system.html"><span class="no">FEATURE</span>青果市場の分荷システム ― 分荷作業をシステムにするには</a></li>
+    <li><a href="/#column"><span class="no">COLUMN</span>コラムの一覧を見る</a></li>
+  </ul>
+</nav>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><a href="/">TOP</a><a href="seika-shijou-system.html">青果市場システムとは</a><a href="terms.html">利用規約</a><a href="privacy.html">プライバシーポリシー</a></p>
+    <p style="margin-top:12px; opacity:.6;">© 2026 vegework inc.</p>
+  </div>
+</footer>
+
+</body>
+</html>

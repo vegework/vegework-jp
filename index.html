@@ -186,8 +186,12 @@ header {
 .flow-legend i { width: 14px; height: 14px; border-radius: 50%; display: inline-block; }
 .flow-note { text-align: center; margin-top: 8px; }
 .flow-note .tags { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin: 16px 0; }
-.guide-link { text-align: center; margin-top: 16px; font-size: 14px; }
-.guide-link a { color: var(--green); font-weight: 700; text-decoration: underline; }
+.guide-card { display: flex; align-items: center; justify-content: space-between; gap: 24px; max-width: 840px; margin: 32px auto 8px; padding: 28px 32px; background: var(--green-pale); border: 2px solid var(--green); border-radius: 12px; text-align: left; }
+.guide-card .guide-label { display: inline-block; background: var(--accent); color: #fff; font-size: 12px; font-weight: 700; letter-spacing: .1em; padding: 3px 12px; border-radius: 4px; }
+.guide-card .guide-title { font-family: var(--serif); font-size: clamp(18px, 2.4vw, 22px); font-weight: 700; color: var(--green-dark); margin: 8px 0 4px; }
+.guide-card .guide-text { font-size: 14px; color: var(--ink-soft); }
+.guide-card .btn { flex-shrink: 0; white-space: nowrap; box-shadow: 0 6px 18px rgba(18,64,42,.25); }
+@media (max-width: 720px) { .guide-card { flex-direction: column; align-items: stretch; text-align: center; padding: 24px 20px; } .guide-card .btn { white-space: normal; padding: 16px 20px; } }
 .flow-note .tag { background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 8px 20px; font-size: 14px; font-weight: 500; }
 .custom-msg { text-align: center; font-family: var(--serif); font-size: clamp(20px, 3vw, 28px); font-weight: 700; margin-top: 40px; line-height: 1.7; }
 .custom-msg .em { color: var(--green); }
@@ -444,7 +448,14 @@ footer { background: var(--green-dark); color: #cfe0d5; padding: 48px 0 32px; fo
       </div>
     </div>
     <p class="custom-msg reveal">だから vegework は、<br>貴社のルールに合わせて<span class="em">カスタマイズして提供</span>します。</p>
-    <p class="guide-link reveal"><a href="seika-shijou-system.html">青果市場システムとは？ 業務の流れと選び方を詳しく見る →</a></p>
+    <div class="guide-card reveal">
+      <div>
+        <span class="guide-label">はじめての方へ</span>
+        <p class="guide-title">青果市場システムとは？</p>
+        <p class="guide-text">荷受から仕切までの業務の流れ、販売管理システムとの違い、選び方のポイントをまとめました。</p>
+      </div>
+      <a class="btn big" href="seika-shijou-system.html">業務の流れと選び方を読む →</a>
+    </div>
     <div class="ai-box reveal">
       <p class="ai-box-title">🤖 個別カスタマイズを、現実的なコストで提供できる理由</p>
       <p>vegework は、開発に<strong>AIエージェントをフル活用</strong>しています。従来なら市場ごとの個別開発に膨大な工数がかかっていましたが、AIとともに開発することで、貴社仕様のカスタマイズを<strong>短期間・低コスト</strong>で実現します。</p>

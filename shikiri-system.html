@@ -129,6 +129,9 @@ td:first-child { white-space: nowrap; }
 .col-nav .current .here { font-size: 11px; font-weight: 700; color: var(--green); margin-left: 8px; }
 ol.flow { counter-reset: none; }
 .faq h3 { font-size: 16px; font-weight: 700; color: var(--green-dark); margin: 28px 0 8px; }
+.shot-fig { margin: 8px 0 28px; }
+.shot-fig img { width: 100%; height: auto; border: 1px solid var(--line); border-radius: 8px; box-shadow: 0 8px 24px rgba(18,64,42,.10); }
+.shot-fig figcaption { font-size: 12px; color: var(--ink-soft); margin-top: 8px; }
 footer { background: var(--green-dark); color: #cfe0d5; padding: 40px 0; font-size: 13px; text-align: center; }
 footer p { color: #cfe0d5; font-size: 13px; margin: 0; }
 footer a { color: #fff; text-decoration: underline; margin: 0 10px; }
@@ -176,6 +179,7 @@ footer a { color: #fff; text-decoration: underline; margin: 0 10px; }
 </ol>
 
 <h2><span class="no">04</span>vegework の仕切の画面でできること</h2>
+<figure class="shot-fig"><img src="assets/img/screens/shikirihyo.webp" alt="vegework の仕切票" width="1000" height="609" loading="lazy"><figcaption>承認が終わった取引から、仕切票をそのまま出力できます。画面は見本のデータで、取引先名などはすべて架空のものです。</figcaption></figure>
 <ul>
 <li><strong>仮仕切と本仕切。</strong>まず仮の仕切値で取引を進め、売り切ってから本仕切で仕切値を確定できます。その場で決められる荷は、最初から本仕切で確定することもできます。</li>
 <li><strong>売り切った荷口を本仕切の一覧に。</strong>在庫が残っていない荷口は、本仕切の一覧に並びます。入荷した日から在庫として繰り越した日まで、日ごとの売れ行きと利益を見ながら仕切値を入れられます。</li>

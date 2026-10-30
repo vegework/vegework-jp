@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>青果市場の荷受（入荷）システム｜入荷の登録から分荷へ ― vegework | 株式会社ベジワーク</title>
+<meta name="description" content="青果卸売市場の荷受（入荷）を、紙や Excel からシステムへ。過去の入荷のコピー、出荷データの取り込み、未処理の入荷の一覧、販売管理システムの決まりに合わせた自動の整形など、営業管理システム「vegework」の荷受の機能を紹介します。">
+<link rel="canonical" href="https://vegework.jp/niuke-system.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="株式会社ベジワーク">
+<meta property="og:title" content="青果市場の荷受（入荷）システム｜入荷の登録から分荷へ ― vegework | 株式会社ベジワーク">
+<meta property="og:description" content="青果卸売市場の荷受（入荷）を、紙や Excel からシステムへ。過去の入荷のコピー、出荷データの取り込み、未処理の入荷の一覧、販売管理システムの決まりに合わせた自動の整形など、営業管理システム「vegework」の荷受の機能を紹介します。">
+<meta property="og:url" content="https://vegework.jp/niuke-system.html">
+<meta property="og:image" content="https://vegework.jp/assets/img/ogp.jpg">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "青果市場の荷受（入荷）システム ― 入荷の登録から分荷へ",
+  "description": "青果卸売市場の荷受（入荷）を、紙や Excel からシステムへ。過去の入荷のコピー、出荷データの取り込み、未処理の入荷の一覧、販売管理システムの決まりに合わせた自動の整形など、営業管理システム「vegework」の荷受の機能を紹介します。",
+  "datePublished": "2026-10-30",
+  "dateModified": "2026-10-30",
+  "image": "https://vegework.jp/assets/img/ogp.jpg",
+  "mainEntityOfPage": "https://vegework.jp/niuke-system.html",
+  "author": {
+   "@type": "Organization",
+   "name": "株式会社ベジワーク"
+  },
+  "publisher": {
+   "@type": "Organization",
+   "name": "株式会社ベジワーク",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://vegework.jp/assets/img/icon.png"
+   }
+  }
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "産地の出荷データを取り込めますか？",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "はい。産地からの出荷データを取り込んで入荷を作れます。取り込み元やデータの形は市場によって異なるため、導入の際に伺って合わせます。"
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "前日と同じような入荷を、毎回入れ直す必要がありますか？",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "いいえ。過去の入荷の組み立てをひな型としてコピーできるため、似た入荷が続くときは入力の手間を大きく減らせます。"
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "販売管理システムの入力の決まりに合わせられますか？",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "はい。荷姿の文字の種類や文字数などを、販売管理システムの決まりに合わせて自動で整えます。荷受番号も同じ数え方で扱います。"
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "入れ忘れや処理漏れを防げますか？",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "入荷は価格登録へ送るまで入荷一覧に残り、担当者ごとに表示されます。未処理の入荷がひと目でわかるので、処理漏れを防げます。"
+    }
+   }
+  ]
+ }
+]
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@700;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/img/icon.png">
+<style>
+:root { --green: #1a5c3a; --green-dark: #12402a; --green-pale: #eaf2ec; --ink: #1f2a24; --ink-soft: #55635b; --bg: #fdfdfb; --line: #dde4de; --accent: #c8842c; --serif: "Noto Serif JP", serif; --sans: "Noto Sans JP", sans-serif; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: var(--sans); color: var(--ink); background: var(--bg); line-height: 1.9; word-break: auto-phrase; }
+a { color: inherit; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+header { position: sticky; top: 0; z-index: 100; background: rgba(253,253,251,.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: 68px; max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+.nav a { text-decoration: none; }
+.logo { display: flex; align-items: center; gap: 12px; }
+.logo img { height: 34px; width: auto; }
+.back { font-size: 14px; font-weight: 700; color: var(--green); }
+main.wrap { padding-top: 64px; padding-bottom: 96px; }
+.col-label { font-size: 13px; letter-spacing: .25em; color: var(--green); font-weight: 700; margin-bottom: 12px; }
+h1 { font-family: var(--serif); font-size: clamp(24px, 4.2vw, 34px); font-weight: 900; line-height: 1.5; }
+.subtitle { font-family: var(--serif); font-size: clamp(16px, 2.6vw, 20px); font-weight: 700; color: var(--green-dark); margin-top: 8px; }
+.meta { margin: 24px 0 40px; padding-bottom: 24px; border-bottom: 1px solid var(--line); font-size: 13px; color: var(--ink-soft); }
+.lead { background: var(--green-pale); border-left: 4px solid var(--green); padding: 20px 24px; margin-bottom: 40px; }
+.lead p { margin: 0; font-weight: 500; }
+h2 { font-family: var(--serif); font-size: clamp(19px, 3vw, 23px); font-weight: 700; color: var(--green-dark); line-height: 1.6; margin: 56px 0 16px; }
+h2 .no { color: var(--accent); margin-right: 8px; }
+p, li, td, th { font-size: 15px; }
+p { margin-bottom: 18px; }
+ul, ol { margin: 0 0 18px 1.4em; }
+li { margin-bottom: 8px; }
+strong { color: var(--green-dark); }
+article li a, article p a { color: var(--green); font-weight: 700; }
+.table-wrap { overflow-x: auto; margin: 8px 0 24px; }
+table { width: 100%; min-width: 520px; border-collapse: collapse; }
+th, td { border: 1px solid var(--line); padding: 10px 14px; text-align: left; vertical-align: top; }
+th { background: var(--green-pale); color: var(--green-dark); white-space: nowrap; }
+td:first-child { white-space: nowrap; }
+td:first-child { white-space: nowrap; }
+.sign { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--line); text-align: right; font-size: 14px; color: var(--ink-soft); }
+.about { margin-top: 32px; background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 20px 24px; font-size: 14px; }
+.about p { font-size: 14px; margin: 0; }
+.about a { display: inline-block; margin-top: 8px; color: var(--green); font-weight: 700; white-space: nowrap; }
+.col-nav { margin-top: 48px; }
+.col-nav h2 { margin: 0 0 16px; font-size: 18px; }
+.col-nav ul { list-style: none; margin: 0; border-top: 1px solid var(--line); }
+.col-nav li { margin: 0; border-bottom: 1px solid var(--line); }
+.col-nav a, .col-nav .current { display: block; padding: 14px 4px; font-size: 14px; text-decoration: none; }
+.col-nav a:hover { color: var(--green); background: var(--green-pale); }
+.col-nav .no { display: block; font-size: 11px; font-weight: 700; letter-spacing: .15em; color: var(--accent); }
+.col-nav .current { color: var(--ink-soft); }
+.col-nav .current .here { font-size: 11px; font-weight: 700; color: var(--green); margin-left: 8px; }
+ol.flow { counter-reset: none; }
+.faq h3 { font-size: 16px; font-weight: 700; color: var(--green-dark); margin: 28px 0 8px; }
+footer { background: var(--green-dark); color: #cfe0d5; padding: 40px 0; font-size: 13px; text-align: center; }
+footer p { color: #cfe0d5; font-size: 13px; margin: 0; }
+footer a { color: #fff; text-decoration: underline; margin: 0 10px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="logo" href="/"><img src="assets/img/logo.svg" alt="vegework"></a>
+    <a class="back" href="/">← トップページへ戻る</a>
+  </div>
+</header>
+
+<main class="wrap">
+<article>
+<p class="col-label">FEATURE</p>
+<h1>青果市場の荷受（入荷）システム</h1>
+<p class="subtitle">― 入荷の登録から分荷へ</p>
+<p class="meta"><time datetime="2026-10-30">2026.10.30</time>　株式会社ベジワーク</p>
+
+<div class="lead">
+<p>荷受は、産地から届いた荷を受け入れて記録する業務で、青果卸売市場の一日の始まりです。本ページでは、荷受の業務と現場の課題、システムにするときのポイント、そしてベジワークの営業管理システム「vegework」の荷受（入荷）の画面でできることを紹介します。</p>
+</div>
+
+<h2><span class="no">01</span>荷受とは</h2>
+<p>荷受とは、産地（荷主）から届いた荷を、品目・産地・等階級・入数・量目・荷姿などとともに受け入れ、記録する業務です。ここで記録した内容が、そのあとの分荷・価格登録・仕切・帳票のすべての元になります。</p>
+<p>荷受の正確さと早さは、市場の一日の段取りを左右します。入荷の記録が遅れれば分荷が遅れ、記録に誤りがあれば、仕切や請求まで誤りが伝わってしまいます。</p>
+
+<h2><span class="no">02</span>荷受の現場の課題</h2>
+<ul>
+<li><strong>送り状を見ながらの手入力。</strong>産地から届いた送り状の内容を一つずつ打ち込むのは、時間がかかるうえに入力の誤りも起きます。</li>
+<li><strong>似た入荷を毎回一から入れる手間。</strong>同じ産地から同じような構成の荷が毎日届くのに、そのたびに一から入力していることも少なくありません。</li>
+<li><strong>未処理の入荷の見落とし。</strong>入荷したまま分荷や価格登録に進んでいない荷が、紙や Excel では見えにくくなります。</li>
+<li><strong>販売管理システムの決まりとの食い違い。</strong>荷姿の文字数や荷受番号の付け方など、販売管理システムの入力の決まりに合っていないと、経理が入力するときに直す手間が生まれます。</li>
+</ul>
+
+<h2><span class="no">03</span>荷受をシステムにするときのポイント</h2>
+<ol>
+<li><strong>入力が速いか。</strong>早朝の限られた時間に使うものです。前の入荷を使い回せるかどうかで、手間は大きく変わります。</li>
+<li><strong>出荷データを取り込めるか。</strong>産地からの出荷データを取り込めれば、手入力そのものが減ります。</li>
+<li><strong>未処理の入荷が見えるか。</strong>まだ次の工程へ進んでいない入荷がひと目でわかると、見落としを防げます。</li>
+<li><strong>販売管理システムの決まりに合わせられるか。</strong>入力の段階で決まりに合った形に整えておけば、経理の手間がなくなります。</li>
+<li><strong>そのまま分荷へ進めるか。</strong>入れた入荷から、画面を移らずに分荷へ進めると、段取りが途切れません。</li>
+</ol>
+
+<h2><span class="no">04</span>vegework の荷受の画面でできること</h2>
+<ul>
+<li><strong>品目を選ぶと、入荷のカードができる。</strong>品目を選ぶと入荷のカードが作られ、荷主・産地・等階級・入数・量目・荷姿などを入れられます。入れたカードから、そのまま分荷へ進めます。</li>
+<li><strong>過去の入荷をコピー。</strong>以前の入荷の組み立てをひな型としてコピーできるため、似た入荷が続くときの入力が速くなります。</li>
+<li><strong>出荷データの取り込み。</strong>産地からの出荷データを取り込んで、入荷を作れます（取り込み元は市場によって異なります）。</li>
+<li><strong>未処理の入荷を一覧で。</strong>入荷は価格登録へ送るまで入荷一覧に残り、産地出荷日の古い順に並びます。担当者ごとに自分の入荷が表示されるので、処理漏れを防げます。</li>
+<li><strong>販売管理システムの決まりに合わせて自動で整える。</strong>荷姿の文字の種類や文字数など、販売管理システムの入力の決まりに合わせて自動で直します。荷受番号も、販売管理システムと同じ「コード＋枝番」の数え方で扱います。</li>
+<li><strong>品目の結び付けを確認。</strong>品目マスタと結び付いていない入荷には確認を出し、手数料の計算漏れを防ぎます。</li>
+<li><strong>残った荷は在庫として引き継ぎ。</strong>その日に分荷しきれなかった分は、在庫として翌日以降へ引き継がれます。</li>
+<li><strong>荷主の送り状との照合。</strong>荷受担当が荷主の送り状と照らし合わせて確定する仕組みに、順次対応しています。</li>
+</ul>
+<p>荷受のあとの流れは、<a href="bunka-system.html">分荷</a>・<a href="kakaku-system.html">価格登録</a>・<a href="shikiri-system.html">仕切</a>・<a href="chohyo-system.html">帳票</a>の各ページ、業務全体の流れは<a href="seika-shijou-system.html">青果市場システムとは？</a>のページで紹介しています。</p>
+
+<h2><span class="no">05</span>導入の進め方</h2>
+<p>荷受の流れや送り状の形、荷受番号の付け方は、市場ごとに違います。vegework の導入では、ヒアリングと視察で今のやり方を確かめたうえで、貴社のルールに合わせて設定・開発します。紙や Excel で運用している場合も、業務ごとに段階的に移していけます。</p>
+
+<h2><span class="no">06</span>よくある質問</h2>
+<div class="faq">
+<h3>Q. 産地の出荷データを取り込めますか？</h3>
+<p>はい。産地からの出荷データを取り込んで入荷を作れます。取り込み元やデータの形は市場によって異なるため、導入の際に伺って合わせます。</p>
+<h3>Q. 前日と同じような入荷を、毎回入れ直す必要がありますか？</h3>
+<p>いいえ。過去の入荷の組み立てをひな型としてコピーできるため、似た入荷が続くときは入力の手間を大きく減らせます。</p>
+<h3>Q. 販売管理システムの入力の決まりに合わせられますか？</h3>
+<p>はい。荷姿の文字の種類や文字数などを、販売管理システムの決まりに合わせて自動で整えます。荷受番号も同じ数え方で扱います。</p>
+<h3>Q. 入れ忘れや処理漏れを防げますか？</h3>
+<p>入荷は価格登録へ送るまで入荷一覧に残り、担当者ごとに表示されます。未処理の入荷がひと目でわかるので、処理漏れを防げます。</p>
+</div>
+
+<div class="about">
+<p>荷受のシステム化や、今の送り状・荷受の流れに合うかどうかのご相談も承っています。お気軽にお問い合わせください。<br><a href="/#contact">資料請求・お問い合わせはこちら →</a></p>
+</div>
+</article>
+
+<nav class="col-nav" aria-label="関連ページ">
+  <h2>関連ページ</h2>
+  <ul>
+    <li><a href="seika-shijou-system.html"><span class="no">GUIDE</span>青果市場システムとは？ ― 青果卸売市場の業務と、システムの選び方</a></li>
+    <li><a href="bunka-system.html"><span class="no">FEATURE</span>青果市場の分荷システム ― 分荷作業をシステムにするには</a></li>
+    <li><a href="kakaku-system.html"><span class="no">FEATURE</span>青果市場の価格登録・承認システム ― 売値と利益をその場で確かめる</a></li>
+  </ul>
+</nav>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><a href="/">TOP</a><a href="seika-shijou-system.html">青果市場システムとは</a><a href="terms.html">利用規約</a><a href="privacy.html">プライバシーポリシー</a></p>
+    <p style="margin-top:12px; opacity:.6;">© 2026 vegework inc.</p>
+  </div>
+</footer>
+
+</body>
+</html>

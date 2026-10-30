@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>青果市場の帳票システム｜分荷票・送り状・販売票・仕切票を入力からそのまま出力 ― vegework | 株式会社ベジワーク</title>
+<meta name="description" content="青果卸売市場の分荷票・送り状・現場用販売票・販売票・仕切票を、入力からそのまま出力。出す買人や荷口を選べ、出し忘れを防ぎ、PDF でも保存できる営業管理システム「vegework」の帳票の機能を紹介します。">
+<link rel="canonical" href="https://vegework.jp/chohyo-system.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="株式会社ベジワーク">
+<meta property="og:title" content="青果市場の帳票システム｜分荷票・送り状・販売票・仕切票を入力からそのまま出力 ― vegework | 株式会社ベジワーク">
+<meta property="og:description" content="青果卸売市場の分荷票・送り状・現場用販売票・販売票・仕切票を、入力からそのまま出力。出す買人や荷口を選べ、出し忘れを防ぎ、PDF でも保存できる営業管理システム「vegework」の帳票の機能を紹介します。">
+<meta property="og:url" content="https://vegework.jp/chohyo-system.html">
+<meta property="og:image" content="https://vegework.jp/assets/img/ogp.jpg">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "青果市場の帳票システム ― 分荷票・送り状・販売票・仕切票を入力からそのまま出力",
+  "description": "青果卸売市場の分荷票・送り状・現場用販売票・販売票・仕切票を、入力からそのまま出力。出す買人や荷口を選べ、出し忘れを防ぎ、PDF でも保存できる営業管理システム「vegework」の帳票の機能を紹介します。",
+  "datePublished": "2026-10-30",
+  "dateModified": "2026-10-30",
+  "image": "https://vegework.jp/assets/img/ogp.jpg",
+  "mainEntityOfPage": "https://vegework.jp/chohyo-system.html",
+  "author": {
+   "@type": "Organization",
+   "name": "株式会社ベジワーク"
+  },
+  "publisher": {
+   "@type": "Organization",
+   "name": "株式会社ベジワーク",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://vegework.jp/assets/img/icon.png"
+   }
+  }
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "今使っている帳票の書式に合わせられますか？",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "はい。今お使いの帳票の項目や並びを伺い、貴社の書式に合わせて作ります。"
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "一部の買人だけ送り状を出せますか？",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "はい。送り状の画面で、出す買人を一覧から選べます。選んだ買人は次に開いたときも覚えているため、毎日同じ選び方をする手間もかかりません。"
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "帳票の出し忘れを防ぐ仕組みはありますか？",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "販売票・仕切票は、まだ出していない件数が画面に表示されます。まとめて印刷できるので、出し忘れを防げます。"
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "紙に印刷せず、PDF で保存できますか？",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "はい。どの帳票も、印刷のほか PDF で保存できます。"
+    }
+   }
+  ]
+ }
+]
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@700;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/img/icon.png">
+<style>
+:root { --green: #1a5c3a; --green-dark: #12402a; --green-pale: #eaf2ec; --ink: #1f2a24; --ink-soft: #55635b; --bg: #fdfdfb; --line: #dde4de; --accent: #c8842c; --serif: "Noto Serif JP", serif; --sans: "Noto Sans JP", sans-serif; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: var(--sans); color: var(--ink); background: var(--bg); line-height: 1.9; word-break: auto-phrase; }
+a { color: inherit; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+header { position: sticky; top: 0; z-index: 100; background: rgba(253,253,251,.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: 68px; max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+.nav a { text-decoration: none; }
+.logo { display: flex; align-items: center; gap: 12px; }
+.logo img { height: 34px; width: auto; }
+.back { font-size: 14px; font-weight: 700; color: var(--green); }
+main.wrap { padding-top: 64px; padding-bottom: 96px; }
+.col-label { font-size: 13px; letter-spacing: .25em; color: var(--green); font-weight: 700; margin-bottom: 12px; }
+h1 { font-family: var(--serif); font-size: clamp(24px, 4.2vw, 34px); font-weight: 900; line-height: 1.5; }
+.subtitle { font-family: var(--serif); font-size: clamp(16px, 2.6vw, 20px); font-weight: 700; color: var(--green-dark); margin-top: 8px; }
+.meta { margin: 24px 0 40px; padding-bottom: 24px; border-bottom: 1px solid var(--line); font-size: 13px; color: var(--ink-soft); }
+.lead { background: var(--green-pale); border-left: 4px solid var(--green); padding: 20px 24px; margin-bottom: 40px; }
+.lead p { margin: 0; font-weight: 500; }
+h2 { font-family: var(--serif); font-size: clamp(19px, 3vw, 23px); font-weight: 700; color: var(--green-dark); line-height: 1.6; margin: 56px 0 16px; }
+h2 .no { color: var(--accent); margin-right: 8px; }
+p, li, td, th { font-size: 15px; }
+p { margin-bottom: 18px; }
+ul, ol { margin: 0 0 18px 1.4em; }
+li { margin-bottom: 8px; }
+strong { color: var(--green-dark); }
+article li a, article p a { color: var(--green); font-weight: 700; }
+.table-wrap { overflow-x: auto; margin: 8px 0 24px; }
+table { width: 100%; min-width: 520px; border-collapse: collapse; }
+th, td { border: 1px solid var(--line); padding: 10px 14px; text-align: left; vertical-align: top; }
+th { background: var(--green-pale); color: var(--green-dark); white-space: nowrap; }
+td:first-child { white-space: nowrap; }
+td:first-child { white-space: nowrap; }
+.sign { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--line); text-align: right; font-size: 14px; color: var(--ink-soft); }
+.about { margin-top: 32px; background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 20px 24px; font-size: 14px; }
+.about p { font-size: 14px; margin: 0; }
+.about a { display: inline-block; margin-top: 8px; color: var(--green); font-weight: 700; white-space: nowrap; }
+.col-nav { margin-top: 48px; }
+.col-nav h2 { margin: 0 0 16px; font-size: 18px; }
+.col-nav ul { list-style: none; margin: 0; border-top: 1px solid var(--line); }
+.col-nav li { margin: 0; border-bottom: 1px solid var(--line); }
+.col-nav a, .col-nav .current { display: block; padding: 14px 4px; font-size: 14px; text-decoration: none; }
+.col-nav a:hover { color: var(--green); background: var(--green-pale); }
+.col-nav .no { display: block; font-size: 11px; font-weight: 700; letter-spacing: .15em; color: var(--accent); }
+.col-nav .current { color: var(--ink-soft); }
+.col-nav .current .here { font-size: 11px; font-weight: 700; color: var(--green); margin-left: 8px; }
+ol.flow { counter-reset: none; }
+.faq h3 { font-size: 16px; font-weight: 700; color: var(--green-dark); margin: 28px 0 8px; }
+footer { background: var(--green-dark); color: #cfe0d5; padding: 40px 0; font-size: 13px; text-align: center; }
+footer p { color: #cfe0d5; font-size: 13px; margin: 0; }
+footer a { color: #fff; text-decoration: underline; margin: 0 10px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="logo" href="/"><img src="assets/img/logo.svg" alt="vegework"></a>
+    <a class="back" href="/">← トップページへ戻る</a>
+  </div>
+</header>
+
+<main class="wrap">
+<article>
+<p class="col-label">FEATURE</p>
+<h1>青果市場の帳票システム</h1>
+<p class="subtitle">― 分荷票・送り状・販売票・仕切票を入力からそのまま出力</p>
+<p class="meta"><time datetime="2026-10-30">2026.10.30</time>　株式会社ベジワーク</p>
+
+<div class="lead">
+<p>青果卸売市場では、分荷票・送り状・販売票・仕切票など、毎日たくさんの帳票を作ります。本ページでは、青果市場の帳票の種類と現場の課題、システムにするときのポイント、そしてベジワークの営業管理システム「vegework」で出せる帳票を紹介します。</p>
+</div>
+
+<h2><span class="no">01</span>青果市場の帳票</h2>
+<p>青果市場の帳票は、大きく「現場で使う帳票」と「取引が確定してから出す帳票」に分かれます。</p>
+<div class="table-wrap">
+<table>
+<tr><th>帳票</th><th>出す時期</th><th>主な相手・使い道</th></tr>
+<tr><td>分荷票</td><td>分荷のとき</td><td>市場の現場（どの荷を、どの買人へ、いくつ回すか）</td></tr>
+<tr><td>送り状</td><td>分荷のとき</td><td>買人（届ける荷の明細）</td></tr>
+<tr><td>現場用販売票</td><td>分荷のとき</td><td>現場で販売する買人</td></tr>
+<tr><td>販売票</td><td>取引の確定後</td><td>買人への売上の記録・販売管理システムへの入力</td></tr>
+<tr><td>仕切票</td><td>仕切の確定後</td><td>産地（荷主）への支払いの知らせ・販売管理システムへの入力</td></tr>
+</table>
+</div>
+
+<h2><span class="no">02</span>帳票の現場の課題</h2>
+<ul>
+<li><strong>手書きと転記が多い。</strong>分荷の内容を紙に書き、それを見ながら送り状を書き、さらに販売管理システムへ打ち直す――。同じ内容を何度も書き写すほど、時間と間違いが増えます。</li>
+<li><strong>書式が市場ごとに違う。</strong>帳票の項目や並びは、市場や取引先ごとに決まっていることが多く、汎用の帳票では合いません。</li>
+<li><strong>出し忘れや二重の発行が起きる。</strong>どの帳票を出したかを紙で管理していると、出し忘れや同じ帳票の二重発行が起きがちです。</li>
+<li><strong>一部だけ出したいときに手間がかかる。</strong>特定の買人や荷口の分だけ出し直したいときに、全部を出し直すのは手間です。</li>
+</ul>
+
+<h2><span class="no">03</span>帳票をシステムにするときのポイント</h2>
+<ol>
+<li><strong>入力からそのまま出せるか。</strong>分荷や価格登録で入れた内容から、書き写さずに帳票が出ることが一番の効果です。</li>
+<li><strong>市場の書式に合わせられるか。</strong>今お使いの帳票の項目や並びに合わせられると、現場も取引先も迷いません。</li>
+<li><strong>必要な分だけ選んで出せるか。</strong>買人や荷口を選んで出せると、出し直しの手間がなくなります。</li>
+<li><strong>出し忘れを防げるか。</strong>まだ出していない帳票がひと目でわかると安心です。</li>
+<li><strong>販売管理システムへ入れやすい形か。</strong>販売票や仕切票の並びが販売管理システムと同じなら、経理の入力が速く、正確になります。</li>
+</ol>
+
+<h2><span class="no">04</span>vegework で出せる帳票</h2>
+<ul>
+<li><strong>分荷票。</strong>品目ごとに、その日の分荷を荷口ごとにまとめて出せます。出す荷口を選んだり、入荷の分と在庫の分を分けて出したりできます。</li>
+<li><strong>送り状。</strong>買人ごとに1枚の送り状を出せます。出す買人は一覧で選べ、選んだ買人は次に開いたときも覚えています。同じ内容の行は1行にまとまり、数量・単価・コメントはその場で直せます（元の分荷のデータは変わりません）。受領書などの控えの書類も、選んで一緒に出せます。</li>
+<li><strong>現場用販売票。</strong>現場で販売する買人向けに、買人と等階級ごとに1枚ずつ出せます。</li>
+<li><strong>販売票・仕切票。</strong>承認が終わった取引から出せます。まだ出していない件数が画面に表示されるので、出し忘れを防げます。まとめて印刷でき、再印刷もできます。印刷の前には枚数を照らし合わせ、不足があれば知らせます。等階級は販売管理システムのマスタの並び順で印字されるため、経理が入力するときに読み替えが要りません。</li>
+<li><strong>PDF でも保存。</strong>どの帳票も、印刷のほか PDF で保存できます。</li>
+</ul>
+<p>帳票の元になる入力は、<a href="bunka-system.html">青果市場の分荷システム</a>、<a href="kakaku-system.html">価格登録・承認システム</a>、<a href="shikiri-system.html">仕切システム</a>の各ページで紹介しています。</p>
+
+<h2><span class="no">05</span>導入の進め方</h2>
+<p>帳票の書式は、市場や取引先ごとに違います。vegework の導入では、今お使いの帳票を拝見し、項目や並びを合わせて作ります。紙や Excel で作っている帳票も、業務ごとに段階的に切り替えていけます。</p>
+
+<h2><span class="no">06</span>よくある質問</h2>
+<div class="faq">
+<h3>Q. 今使っている帳票の書式に合わせられますか？</h3>
+<p>はい。今お使いの帳票の項目や並びを伺い、貴社の書式に合わせて作ります。</p>
+<h3>Q. 一部の買人だけ送り状を出せますか？</h3>
+<p>はい。送り状の画面で、出す買人を一覧から選べます。選んだ買人は次に開いたときも覚えているため、毎日同じ選び方をする手間もかかりません。</p>
+<h3>Q. 帳票の出し忘れを防ぐ仕組みはありますか？</h3>
+<p>販売票・仕切票は、まだ出していない件数が画面に表示されます。まとめて印刷できるので、出し忘れを防げます。</p>
+<h3>Q. 紙に印刷せず、PDF で保存できますか？</h3>
+<p>はい。どの帳票も、印刷のほか PDF で保存できます。</p>
+</div>
+
+<div class="about">
+<p>帳票のシステム化や、今の書式に合うかどうかのご相談も承っています。お気軽にお問い合わせください。<br><a href="/#contact">資料請求・お問い合わせはこちら →</a></p>
+</div>
+</article>
+
+<nav class="col-nav" aria-label="関連ページ">
+  <h2>関連ページ</h2>
+  <ul>
+    <li><a href="seika-shijou-system.html"><span class="no">GUIDE</span>青果市場システムとは？ ― 青果卸売市場の業務と、システムの選び方</a></li>
+    <li><a href="bunka-system.html"><span class="no">FEATURE</span>青果市場の分荷システム ― 分荷作業をシステムにするには</a></li>
+    <li><a href="shikiri-system.html"><span class="no">FEATURE</span>青果市場の仕切システム ― 仕切値の確定から仕切票の出力まで</a></li>
+  </ul>
+</nav>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><a href="/">TOP</a><a href="seika-shijou-system.html">青果市場システムとは</a><a href="terms.html">利用規約</a><a href="privacy.html">プライバシーポリシー</a></p>
+    <p style="margin-top:12px; opacity:.6;">© 2026 vegework inc.</p>
+  </div>
+</footer>
+
+</body>
+</html>

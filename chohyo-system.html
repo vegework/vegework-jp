@@ -130,6 +130,9 @@ td:first-child { white-space: nowrap; }
 .col-nav .current .here { font-size: 11px; font-weight: 700; color: var(--green); margin-left: 8px; }
 ol.flow { counter-reset: none; }
 .faq h3 { font-size: 16px; font-weight: 700; color: var(--green-dark); margin: 28px 0 8px; }
+.shot-fig { margin: 8px 0 28px; }
+.shot-fig img { width: 100%; height: auto; border: 1px solid var(--line); border-radius: 8px; box-shadow: 0 8px 24px rgba(18,64,42,.10); }
+.shot-fig figcaption { font-size: 12px; color: var(--ink-soft); margin-top: 8px; }
 footer { background: var(--green-dark); color: #cfe0d5; padding: 40px 0; font-size: 13px; text-align: center; }
 footer p { color: #cfe0d5; font-size: 13px; margin: 0; }
 footer a { color: #fff; text-decoration: underline; margin: 0 10px; }
@@ -186,6 +189,7 @@ footer a { color: #fff; text-decoration: underline; margin: 0 10px; }
 </ol>
 
 <h2><span class="no">04</span>vegework で出せる帳票</h2>
+<figure class="shot-fig"><img src="assets/img/screens/bunkahyo.webp" alt="vegework の分荷票" width="1300" height="520" loading="lazy"><figcaption>入力した分荷の内容から、そのまま分荷票を出力できます（取引先名はぼかしています）。</figcaption></figure>
 <ul>
 <li><strong>分荷票。</strong>品目ごとに、その日の分荷を荷口ごとにまとめて出せます。出す荷口を選んだり、入荷の分と在庫の分を分けて出したりできます。</li>
 <li><strong>送り状。</strong>買人ごとに1枚の送り状を出せます。出す買人は一覧で選べ、選んだ買人は次に開いたときも覚えています。同じ内容の行は1行にまとまり、数量・単価・コメントはその場で直せます（元の分荷のデータは変わりません）。受領書などの控えの書類も、選んで一緒に出せます。</li>

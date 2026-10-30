@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>青果市場の分荷システム｜分荷作業をシステムにするには ― vegework | 株式会社ベジワーク</title>
+<meta name="description" content="青果卸売市場の分荷を、紙や Excel からシステムへ。分荷の業務と現場の課題、システムにするときのポイント、営業管理システム「vegework」の分荷の画面でできること（よく分荷する買人の候補表示・分荷票の出力・在庫の引き継ぎなど）を紹介します。">
+<link rel="canonical" href="https://vegework.jp/bunka-system.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="株式会社ベジワーク">
+<meta property="og:title" content="青果市場の分荷システム｜分荷作業をシステムにするには ― vegework | 株式会社ベジワーク">
+<meta property="og:description" content="青果卸売市場の分荷を、紙や Excel からシステムへ。分荷の業務と現場の課題、システムにするときのポイント、営業管理システム「vegework」の分荷の画面でできること（よく分荷する買人の候補表示・分荷票の出力・在庫の引き継ぎなど）を紹介します。">
+<meta property="og:url" content="https://vegework.jp/bunka-system.html">
+<meta property="og:image" content="https://vegework.jp/assets/img/ogp.jpg">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "青果市場の分荷システム ― 分荷作業をシステムにするには",
+  "description": "青果卸売市場の分荷を、紙や Excel からシステムへ。分荷の業務と現場の課題、システムにするときのポイント、営業管理システム「vegework」の分荷の画面でできること（よく分荷する買人の候補表示・分荷票の出力・在庫の引き継ぎなど）を紹介します。",
+  "datePublished": "2026-10-30",
+  "dateModified": "2026-10-30",
+  "image": "https://vegework.jp/assets/img/ogp.jpg",
+  "mainEntityOfPage": "https://vegework.jp/bunka-system.html",
+  "author": {
+   "@type": "Organization",
+   "name": "株式会社ベジワーク"
+  },
+  "publisher": {
+   "@type": "Organization",
+   "name": "株式会社ベジワーク",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://vegework.jp/assets/img/icon.png"
+   }
+  }
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "市場独自の分荷のやり方でも使えますか？",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "はい。入荷の前に分荷するか後に分荷するか、等階級の分け方、分荷の指示の方法など、市場ごとのやり方を伺ったうえで、貴社のルールに合わせてカスタマイズして提供します。"
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "分荷票を今の紙と同じように出せますか？",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "分荷票・送り状・現場用販売票は、入力した内容から PDF で出力できます。今お使いの帳票の形を伺い、必要に応じて合わせて作ります。"
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "キーボードだけで入力できますか？",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "はい。矢印キーで欄を移動でき、買人コード欄では「よく分荷する買人」の候補をスペースキーで選び、Enter キーで決められます。マウスに持ち替えずに入力を進められます。"
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "その日に分荷しきれなかった荷はどうなりますか？",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "残った荷は在庫カードとして翌日以降に引き継がれ、続けて分荷できます。在庫の荷も、分荷を終えたら価格登録へ送ります。"
+    }
+   }
+  ]
+ }
+]
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@700;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/img/icon.png">
+<style>
+:root { --green: #1a5c3a; --green-dark: #12402a; --green-pale: #eaf2ec; --ink: #1f2a24; --ink-soft: #55635b; --bg: #fdfdfb; --line: #dde4de; --accent: #c8842c; --serif: "Noto Serif JP", serif; --sans: "Noto Sans JP", sans-serif; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: var(--sans); color: var(--ink); background: var(--bg); line-height: 1.9; word-break: auto-phrase; }
+a { color: inherit; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+header { position: sticky; top: 0; z-index: 100; background: rgba(253,253,251,.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: 68px; max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+.nav a { text-decoration: none; }
+.logo { display: flex; align-items: center; gap: 12px; }
+.logo img { height: 34px; width: auto; }
+.back { font-size: 14px; font-weight: 700; color: var(--green); }
+main.wrap { padding-top: 64px; padding-bottom: 96px; }
+.col-label { font-size: 13px; letter-spacing: .25em; color: var(--green); font-weight: 700; margin-bottom: 12px; }
+h1 { font-family: var(--serif); font-size: clamp(24px, 4.2vw, 34px); font-weight: 900; line-height: 1.5; }
+.subtitle { font-family: var(--serif); font-size: clamp(16px, 2.6vw, 20px); font-weight: 700; color: var(--green-dark); margin-top: 8px; }
+.meta { margin: 24px 0 40px; padding-bottom: 24px; border-bottom: 1px solid var(--line); font-size: 13px; color: var(--ink-soft); }
+.lead { background: var(--green-pale); border-left: 4px solid var(--green); padding: 20px 24px; margin-bottom: 40px; }
+.lead p { margin: 0; font-weight: 500; }
+h2 { font-family: var(--serif); font-size: clamp(19px, 3vw, 23px); font-weight: 700; color: var(--green-dark); line-height: 1.6; margin: 56px 0 16px; }
+h2 .no { color: var(--accent); margin-right: 8px; }
+p, li, td, th { font-size: 15px; }
+p { margin-bottom: 18px; }
+ul, ol { margin: 0 0 18px 1.4em; }
+li { margin-bottom: 8px; }
+strong { color: var(--green-dark); }
+article p a { color: var(--green); font-weight: 700; }
+.table-wrap { overflow-x: auto; margin: 8px 0 24px; }
+table { width: 100%; min-width: 520px; border-collapse: collapse; }
+th, td { border: 1px solid var(--line); padding: 10px 14px; text-align: left; vertical-align: top; }
+th { background: var(--green-pale); color: var(--green-dark); white-space: nowrap; }
+td:first-child { white-space: nowrap; }
+.sign { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--line); text-align: right; font-size: 14px; color: var(--ink-soft); }
+.about { margin-top: 32px; background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 20px 24px; font-size: 14px; }
+.about p { font-size: 14px; margin: 0; }
+.about a { display: inline-block; margin-top: 8px; color: var(--green); font-weight: 700; white-space: nowrap; }
+.col-nav { margin-top: 48px; }
+.col-nav h2 { margin: 0 0 16px; font-size: 18px; }
+.col-nav ul { list-style: none; margin: 0; border-top: 1px solid var(--line); }
+.col-nav li { margin: 0; border-bottom: 1px solid var(--line); }
+.col-nav a, .col-nav .current { display: block; padding: 14px 4px; font-size: 14px; text-decoration: none; }
+.col-nav a:hover { color: var(--green); background: var(--green-pale); }
+.col-nav .no { display: block; font-size: 11px; font-weight: 700; letter-spacing: .15em; color: var(--accent); }
+.col-nav .current { color: var(--ink-soft); }
+.col-nav .current .here { font-size: 11px; font-weight: 700; color: var(--green); margin-left: 8px; }
+ol.flow { counter-reset: none; }
+.faq h3 { font-size: 16px; font-weight: 700; color: var(--green-dark); margin: 28px 0 8px; }
+footer { background: var(--green-dark); color: #cfe0d5; padding: 40px 0; font-size: 13px; text-align: center; }
+footer p { color: #cfe0d5; font-size: 13px; margin: 0; }
+footer a { color: #fff; text-decoration: underline; margin: 0 10px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="logo" href="/"><img src="assets/img/logo.svg" alt="vegework"></a>
+    <a class="back" href="/">← トップページへ戻る</a>
+  </div>
+</header>
+
+<main class="wrap">
+<article>
+<p class="col-label">FEATURE</p>
+<h1>青果市場の分荷システム</h1>
+<p class="subtitle">― 分荷作業をシステムにするには</p>
+<p class="meta"><time datetime="2026-10-30">2026.10.30</time>　株式会社ベジワーク</p>
+
+<div class="lead">
+<p>青果卸売市場の分荷は、市場ごとにやり方が違い、紙や Excel、ベテランの経験に頼りがちな業務です。本ページでは、分荷の業務と現場の課題、分荷をシステムにするときのポイント、そしてベジワークの営業管理システム「vegework」の分荷の画面でできることを紹介します。</p>
+</div>
+
+<h2><span class="no">01</span>分荷とは</h2>
+<p>分荷とは、産地から青果卸売市場に届いた荷を、どの買人（仲卸や売買参加者）へ、いくつ回すかを決めて割り当てる業務です。品目、産地、等級・階級ごとに、買人の注文や過去の取引、その日の入荷量を見ながら決めていきます。</p>
+<p>分荷の進め方は全国一律ではありません。産地県の市場では荷が入ってから分荷することが多い一方、産地から遠い市場では入荷の前に分荷を決めておくこともあります。現場売りやせりが中心の市場では、分荷と価格形成が同時に進みます。</p>
+<p>分荷の指示の方法もさまざまです。紙の伝票に書く市場もあれば、Excel で表を作る市場、既存のシステムに入れる市場もあります。</p>
+
+<h2><span class="no">02</span>分荷の現場の課題</h2>
+<ul>
+<li><strong>時間が限られている。</strong>分荷は早朝の短い時間に集中します。入力に手間がかかると、そのまま現場の遅れにつながります。</li>
+<li><strong>同じ内容を何度も書き写している。</strong>紙の分荷票に書いた内容を、あとで経理が販売管理システムへ打ち直す――。転記のたびに手間と間違いが生まれます。</li>
+<li><strong>ベテランの記憶に頼っている。</strong>「この品目はこの買人へ」という段取りが、担当者の頭の中にしかないことも少なくありません。担当者が休むと、分荷が止まりかねません。</li>
+<li><strong>帳票づくりに手がかかる。</strong>分荷票や送り状を手書きや Excel で作ると、そのぶん現場の時間が削られます。</li>
+<li><strong>残った荷の管理が難しい。</strong>その日に分荷しきれなかった荷を、翌日以降へ正しく引き継ぐ必要があります。</li>
+</ul>
+
+<h2><span class="no">03</span>分荷をシステムにするときのポイント</h2>
+<ol>
+<li><strong>市場の順番とやり方に合わせられるか。</strong>入荷の前に分荷するのか、後に分荷するのか。等階級の分け方や分荷票の形も含めて、今のやり方のまま使えることが定着の条件です。</li>
+<li><strong>入力が速いか。</strong>早朝の現場で使うものです。キーボードから手を離さずに進められるか、よく使う買人をすぐに呼び出せるかで、使い勝手は大きく変わります。</li>
+<li><strong>帳票がそのまま出るか。</strong>分荷票・送り状などを、入力した内容からそのまま出せると、書き写しがなくなります。</li>
+<li><strong>次の工程へつながるか。</strong>分荷した内容が、価格登録や仕切、そして販売管理システムへとつながるかどうかで、業務全体の効率が決まります。</li>
+</ol>
+
+<h2><span class="no">04</span>vegework の分荷の画面でできること</h2>
+<ul>
+<li><strong>カードとマトリクスを切り替えて入力。</strong>1つの荷口を1枚のカードで扱う画面と、同じ品目の荷口をまとめて表で入れる画面を、使いやすい方に切り替えられます。</li>
+<li><strong>等階級の列で、箱の数を入れるだけ。</strong>等階級の列は追加や並べ替えができます。買人ごとに箱の数を入れると、未分荷の残りが減っていくので、割り当て漏れがひと目でわかります。</li>
+<li><strong>「よく分荷する買人」を候補に表示。</strong>空の買人コード欄に入ると、その品目で直近28日間に分荷した実績の多い順に、買人が最大10人、候補として出ます。スペースキーで選び、Enter キーで決められるので、キーボードから手を離さずに入力を進められます。ベテランの段取りが、実績として画面に残ります。</li>
+<li><strong>過去の入荷をコピー。</strong>以前の入荷の組み立てをひな型としてコピーできるため、似た入荷が続くときの入力が速くなります。</li>
+<li><strong>分荷票・送り状・現場用販売票を PDF で出力。</strong>入力した内容から、そのまま帳票を出せます。出したい荷口だけを選んで出力することもできます。</li>
+<li><strong>残った荷は在庫として引き継ぎ。</strong>分荷しきれなかった荷は在庫カードとして翌日以降に引き継がれ、続けて分荷できます。売約済みの買人への分荷の扱いにも対応しています。</li>
+<li><strong>次の工程へそのまま送る。</strong>分荷を終えた荷口は価格登録へ送り、売値の確定や仕切へとつなげます。</li>
+</ul>
+<p>このほかの機能や、青果卸売市場の業務全体の流れについては、<a href="seika-shijou-system.html">青果市場システムとは？</a>のページで紹介しています。</p>
+
+<h2><span class="no">05</span>導入の進め方</h2>
+<p>vegework の導入は、今の分荷のやり方を知ることから始まります。オンラインでのヒアリングと市場への視察で、分荷の順番や指示の方法、帳票の形を確かめたうえで、貴社のルールに合わせて設定・開発します。紙や Excel で運用している場合も、一度にすべてを切り替えるのではなく、業務ごとに段階的に移していけます。</p>
+
+<h2><span class="no">06</span>よくある質問</h2>
+<div class="faq">
+<h3>Q. 市場独自の分荷のやり方でも使えますか？</h3>
+<p>はい。入荷の前に分荷するか後に分荷するか、等階級の分け方、分荷の指示の方法など、市場ごとのやり方を伺ったうえで、貴社のルールに合わせてカスタマイズして提供します。</p>
+<h3>Q. 分荷票を今の紙と同じように出せますか？</h3>
+<p>分荷票・送り状・現場用販売票は、入力した内容から PDF で出力できます。今お使いの帳票の形を伺い、必要に応じて合わせて作ります。</p>
+<h3>Q. キーボードだけで入力できますか？</h3>
+<p>はい。矢印キーで欄を移動でき、買人コード欄では「よく分荷する買人」の候補をスペースキーで選び、Enter キーで決められます。マウスに持ち替えずに入力を進められます。</p>
+<h3>Q. その日に分荷しきれなかった荷はどうなりますか？</h3>
+<p>残った荷は在庫カードとして翌日以降に引き継がれ、続けて分荷できます。在庫の荷も、分荷を終えたら価格登録へ送ります。</p>
+</div>
+
+<div class="about">
+<p>分荷のシステム化や、今の分荷のやり方に合うかどうかのご相談も承っています。お気軽にお問い合わせください。<br><a href="/#contact">資料請求・お問い合わせはこちら →</a></p>
+</div>
+</article>
+
+<nav class="col-nav" aria-label="関連ページ">
+  <h2>関連ページ</h2>
+  <ul>
+    <li><a href="seika-shijou-system.html"><span class="no">GUIDE</span>青果市場システムとは？ ― 青果卸売市場の業務と、システムの選び方</a></li>
+    <li><a href="column-eigyou-2030.html"><span class="no">COLUMN 01</span>生成AIの誕生によって、2030年までに青果市場の営業はこう変わる ― 入力する人から、判断する人へ</a></li>
+    <li><a href="/#column"><span class="no">COLUMN</span>コラムの一覧を見る</a></li>
+  </ul>
+</nav>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><a href="/">TOP</a><a href="seika-shijou-system.html">青果市場システムとは</a><a href="terms.html">利用規約</a><a href="privacy.html">プライバシーポリシー</a></p>
+    <p style="margin-top:12px; opacity:.6;">© 2026 vegework inc.</p>
+  </div>
+</footer>
+
+</body>
+</html>

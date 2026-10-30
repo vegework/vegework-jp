@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>青果市場の仕切システム｜仕切値の確定から仕切票の出力まで ― vegework | 株式会社ベジワーク</title>
+<meta name="description" content="青果卸売市場の仕切を、紙や Excel からシステムへ。売り切ってからの本仕切、段仕切、荷主ごとの控除の自動計算、出し忘れを防ぐ仕切票の出力など、営業管理システム「vegework」の仕切の機能を紹介します。">
+<link rel="canonical" href="https://vegework.jp/shikiri-system.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="株式会社ベジワーク">
+<meta property="og:title" content="青果市場の仕切システム｜仕切値の確定から仕切票の出力まで ― vegework | 株式会社ベジワーク">
+<meta property="og:description" content="青果卸売市場の仕切を、紙や Excel からシステムへ。売り切ってからの本仕切、段仕切、荷主ごとの控除の自動計算、出し忘れを防ぐ仕切票の出力など、営業管理システム「vegework」の仕切の機能を紹介します。">
+<meta property="og:url" content="https://vegework.jp/shikiri-system.html">
+<meta property="og:image" content="https://vegework.jp/assets/img/ogp.jpg">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "青果市場の仕切システム ― 仕切値の確定から仕切票の出力まで",
+  "description": "青果卸売市場の仕切を、紙や Excel からシステムへ。売り切ってからの本仕切、段仕切、荷主ごとの控除の自動計算、出し忘れを防ぐ仕切票の出力など、営業管理システム「vegework」の仕切の機能を紹介します。",
+  "datePublished": "2026-10-30",
+  "dateModified": "2026-10-30",
+  "image": "https://vegework.jp/assets/img/ogp.jpg",
+  "mainEntityOfPage": "https://vegework.jp/shikiri-system.html",
+  "author": {
+   "@type": "Organization",
+   "name": "株式会社ベジワーク"
+  },
+  "publisher": {
+   "@type": "Organization",
+   "name": "株式会社ベジワーク",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://vegework.jp/assets/img/icon.png"
+   }
+  }
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "売り切るまで仕切値を決められない荷はどうすればよいですか？",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "仮仕切で取引を進め、売り切ったあとに本仕切で仕切値を確定できます。在庫が残っていない荷口は本仕切の一覧に並ぶので、日ごとの売れ行きを見ながら仕切値を入れられます。"
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "一部が傷んでいたときの仕切はどうしますか？",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "段仕切を使います。1つの等階級を数量で分け、売れた分と売り物にならなかった分を、別の単価で仕切れます。"
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "荷主ごとの控除を自動で計算できますか？",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "はい。荷主ごとに控除を設定しておくと、仕切の金額から自動で差し引きます。重さや箱数など、控除の計算のしかたも選べます。"
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "仕切票は今使っている形に合わせられますか？",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "今お使いの仕切票の形や項目を伺い、必要に応じて合わせて作ります。等階級は販売管理システムのマスタの並び順に合わせて印字できます。"
+    }
+   }
+  ]
+ }
+]
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@700;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/img/icon.png">
+<style>
+:root { --green: #1a5c3a; --green-dark: #12402a; --green-pale: #eaf2ec; --ink: #1f2a24; --ink-soft: #55635b; --bg: #fdfdfb; --line: #dde4de; --accent: #c8842c; --serif: "Noto Serif JP", serif; --sans: "Noto Sans JP", sans-serif; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: var(--sans); color: var(--ink); background: var(--bg); line-height: 1.9; word-break: auto-phrase; }
+a { color: inherit; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+header { position: sticky; top: 0; z-index: 100; background: rgba(253,253,251,.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: 68px; max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+.nav a { text-decoration: none; }
+.logo { display: flex; align-items: center; gap: 12px; }
+.logo img { height: 34px; width: auto; }
+.back { font-size: 14px; font-weight: 700; color: var(--green); }
+main.wrap { padding-top: 64px; padding-bottom: 96px; }
+.col-label { font-size: 13px; letter-spacing: .25em; color: var(--green); font-weight: 700; margin-bottom: 12px; }
+h1 { font-family: var(--serif); font-size: clamp(24px, 4.2vw, 34px); font-weight: 900; line-height: 1.5; }
+.subtitle { font-family: var(--serif); font-size: clamp(16px, 2.6vw, 20px); font-weight: 700; color: var(--green-dark); margin-top: 8px; }
+.meta { margin: 24px 0 40px; padding-bottom: 24px; border-bottom: 1px solid var(--line); font-size: 13px; color: var(--ink-soft); }
+.lead { background: var(--green-pale); border-left: 4px solid var(--green); padding: 20px 24px; margin-bottom: 40px; }
+.lead p { margin: 0; font-weight: 500; }
+h2 { font-family: var(--serif); font-size: clamp(19px, 3vw, 23px); font-weight: 700; color: var(--green-dark); line-height: 1.6; margin: 56px 0 16px; }
+h2 .no { color: var(--accent); margin-right: 8px; }
+p, li, td, th { font-size: 15px; }
+p { margin-bottom: 18px; }
+ul, ol { margin: 0 0 18px 1.4em; }
+li { margin-bottom: 8px; }
+strong { color: var(--green-dark); }
+article li a, article p a { color: var(--green); font-weight: 700; }
+.table-wrap { overflow-x: auto; margin: 8px 0 24px; }
+table { width: 100%; min-width: 520px; border-collapse: collapse; }
+th, td { border: 1px solid var(--line); padding: 10px 14px; text-align: left; vertical-align: top; }
+th { background: var(--green-pale); color: var(--green-dark); white-space: nowrap; }
+td:first-child { white-space: nowrap; }
+.sign { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--line); text-align: right; font-size: 14px; color: var(--ink-soft); }
+.about { margin-top: 32px; background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 20px 24px; font-size: 14px; }
+.about p { font-size: 14px; margin: 0; }
+.about a { display: inline-block; margin-top: 8px; color: var(--green); font-weight: 700; white-space: nowrap; }
+.col-nav { margin-top: 48px; }
+.col-nav h2 { margin: 0 0 16px; font-size: 18px; }
+.col-nav ul { list-style: none; margin: 0; border-top: 1px solid var(--line); }
+.col-nav li { margin: 0; border-bottom: 1px solid var(--line); }
+.col-nav a, .col-nav .current { display: block; padding: 14px 4px; font-size: 14px; text-decoration: none; }
+.col-nav a:hover { color: var(--green); background: var(--green-pale); }
+.col-nav .no { display: block; font-size: 11px; font-weight: 700; letter-spacing: .15em; color: var(--accent); }
+.col-nav .current { color: var(--ink-soft); }
+.col-nav .current .here { font-size: 11px; font-weight: 700; color: var(--green); margin-left: 8px; }
+ol.flow { counter-reset: none; }
+.faq h3 { font-size: 16px; font-weight: 700; color: var(--green-dark); margin: 28px 0 8px; }
+footer { background: var(--green-dark); color: #cfe0d5; padding: 40px 0; font-size: 13px; text-align: center; }
+footer p { color: #cfe0d5; font-size: 13px; margin: 0; }
+footer a { color: #fff; text-decoration: underline; margin: 0 10px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="logo" href="/"><img src="assets/img/logo.svg" alt="vegework"></a>
+    <a class="back" href="/">← トップページへ戻る</a>
+  </div>
+</header>
+
+<main class="wrap">
+<article>
+<p class="col-label">FEATURE</p>
+<h1>青果市場の仕切システム</h1>
+<p class="subtitle">― 仕切値の確定から仕切票の出力まで</p>
+<p class="meta"><time datetime="2026-10-30">2026.10.30</time>　株式会社ベジワーク</p>
+
+<div class="lead">
+<p>仕切は、産地（荷主）へ支払う金額を確定させる業務で、市場と産地の信頼に直結します。本ページでは、仕切の業務と現場の課題、システムにするときのポイント、そしてベジワークの営業管理システム「vegework」の仕切の画面でできることを紹介します。</p>
+</div>
+
+<h2><span class="no">01</span>仕切とは</h2>
+<p>仕切とは、売れた荷について産地へ支払う値段（仕切値）を決め、手数料や控除を差し引いて、産地へ支払う金額を確定させる業務です。確定した内容は、仕切票（市場によっては仕切書とも呼ばれます）で産地へ知らせます。</p>
+<p>売値が買人との取引で決まるのに対し、仕切値は産地との約束です。仕切の正確さと早さは、そのまま産地からの信頼と、次の出荷につながります。</p>
+
+<h2><span class="no">02</span>仕切の現場の課題</h2>
+<ul>
+<li><strong>売り切るまで仕切値を決められない荷がある。</strong>数日かけて売る荷は、売れ行きを見てから仕切値を決めたいものです。その間の管理が、紙や Excel では追いにくくなります。</li>
+<li><strong>一部が傷んでいたときの扱いが難しい。</strong>同じ等階級の中に売り物にならなかった分があると、単価を分けて仕切る必要があります。</li>
+<li><strong>荷主ごとの控除の計算が手作業。</strong>荷主ごとに違う控除を電卓や Excel で計算すると、時間がかかるうえに間違いも起きます。</li>
+<li><strong>仕切票の出し忘れ。</strong>どの荷口の仕切票を出したかを紙で管理していると、出し忘れや二重の発行が起きがちです。</li>
+<li><strong>販売管理システムへの打ち直し。</strong>仕切票を見ながら経理が販売管理システムへ入力するとき、項目の並びが違うと読み替えの手間と間違いが生まれます。</li>
+</ul>
+
+<h2><span class="no">03</span>仕切をシステムにするときのポイント</h2>
+<ol>
+<li><strong>売れ行きを見ながら仕切値を決められるか。</strong>売り切るまでの日ごとの売れ行きと利益を確かめながら、仕切値を確定できることが大切です。</li>
+<li><strong>控除を自動で計算できるか。</strong>荷主ごとの控除を設定しておけば、毎回の計算が要らなくなります。</li>
+<li><strong>仕切票の出し忘れを防げるか。</strong>まだ出していない仕切票がひと目でわかり、まとめて出せると安心です。</li>
+<li><strong>販売管理システムへ入れやすい形で出せるか。</strong>仕切票の並びが販売管理システムと同じなら、経理の入力が速く、正確になります。</li>
+</ol>
+
+<h2><span class="no">04</span>vegework の仕切の画面でできること</h2>
+<ul>
+<li><strong>仮仕切と本仕切。</strong>まず仮の仕切値で取引を進め、売り切ってから本仕切で仕切値を確定できます。その場で決められる荷は、最初から本仕切で確定することもできます。</li>
+<li><strong>売り切った荷口を本仕切の一覧に。</strong>在庫が残っていない荷口は、本仕切の一覧に並びます。入荷した日から在庫として繰り越した日まで、日ごとの売れ行きと利益を見ながら仕切値を入れられます。</li>
+<li><strong>段仕切。</strong>1つの等階級の中で数量を分け、別の単価で仕切れます。一部が傷んでいて売り物にならなかったときなどに使えます。</li>
+<li><strong>荷主ごとの控除を自動で計算。</strong>荷主ごとの控除を設定しておくと、仕切の金額から自動で差し引きます。重さや箱数など、控除の計算のしかたも選べます。</li>
+<li><strong>上長はまとめて確認・承認。</strong>承認を使う場合も、上長は担当者ごとの売上・利益を見ながら、本仕切をまとめて承認できます。</li>
+<li><strong>仕切票の出し忘れを防ぐ。</strong>確定した荷口の仕切票を出力でき、まだ出していない荷口の数が画面に表示されます。まとめて印刷でき、再印刷もできます。</li>
+<li><strong>販売管理システムと同じ並びで印字。</strong>仕切票の等階級は、販売管理システムのマスタの並び順に合わせて印字されるため、経理が入力するときに読み替えが要りません。</li>
+<li><strong>確定後の訂正にも対応。</strong>確定したあとに修正が必要になったときは、権限のある人が赤黒訂正（元の内容を打ち消して正しい内容を入れ直す方法）で直せます。</li>
+</ul>
+<p>仕切値を入れる前の売値の確定については<a href="kakaku-system.html">青果市場の価格登録・承認システム</a>のページ、業務全体の流れは<a href="seika-shijou-system.html">青果市場システムとは？</a>のページで紹介しています。</p>
+
+<h2><span class="no">05</span>導入の進め方</h2>
+<p>控除の計算のしかたや仕切票の形は、市場ごと、荷主ごとに違います。vegework の導入では、ヒアリングと視察で今のやり方を確かめたうえで、貴社のルールに合わせて設定・開発します。紙や Excel で運用している場合も、業務ごとに段階的に移していけます。</p>
+
+<h2><span class="no">06</span>よくある質問</h2>
+<div class="faq">
+<h3>Q. 売り切るまで仕切値を決められない荷はどうすればよいですか？</h3>
+<p>仮仕切で取引を進め、売り切ったあとに本仕切で仕切値を確定できます。在庫が残っていない荷口は本仕切の一覧に並ぶので、日ごとの売れ行きを見ながら仕切値を入れられます。</p>
+<h3>Q. 一部が傷んでいたときの仕切はどうしますか？</h3>
+<p>段仕切を使います。1つの等階級を数量で分け、売れた分と売り物にならなかった分を、別の単価で仕切れます。</p>
+<h3>Q. 荷主ごとの控除を自動で計算できますか？</h3>
+<p>はい。荷主ごとに控除を設定しておくと、仕切の金額から自動で差し引きます。重さや箱数など、控除の計算のしかたも選べます。</p>
+<h3>Q. 仕切票は今使っている形に合わせられますか？</h3>
+<p>今お使いの仕切票の形や項目を伺い、必要に応じて合わせて作ります。等階級は販売管理システムのマスタの並び順に合わせて印字できます。</p>
+</div>
+
+<div class="about">
+<p>仕切や仕切票のシステム化について、お気軽にご相談ください。資料のご請求も承っています。<br><a href="/#contact">資料請求・お問い合わせはこちら →</a></p>
+</div>
+</article>
+
+<nav class="col-nav" aria-label="関連ページ">
+  <h2>関連ページ</h2>
+  <ul>
+    <li><a href="seika-shijou-system.html"><span class="no">GUIDE</span>青果市場システムとは？ ― 青果卸売市場の業務と、システムの選び方</a></li>
+    <li><a href="bunka-system.html"><span class="no">FEATURE</span>青果市場の分荷システム ― 分荷作業をシステムにするには</a></li>
+    <li><a href="kakaku-system.html"><span class="no">FEATURE</span>青果市場の価格登録・承認システム ― 売値と利益をその場で確かめる</a></li>
+  </ul>
+</nav>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><a href="/">TOP</a><a href="seika-shijou-system.html">青果市場システムとは</a><a href="terms.html">利用規約</a><a href="privacy.html">プライバシーポリシー</a></p>
+    <p style="margin-top:12px; opacity:.6;">© 2026 vegework inc.</p>
+  </div>
+</footer>
+
+</body>
+</html>

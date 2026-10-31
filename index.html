@@ -215,12 +215,15 @@ header {
 .fl-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 @media (max-width: 960px) { .fl-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 640px) { .fl-grid { grid-template-columns: 1fr; } }
-.fl-card { display: flex; flex-direction: column; gap: 6px; padding: 20px 22px; background: #fff; border: 1.5px solid var(--line); border-radius: 10px; transition: border-color .2s, box-shadow .2s, transform .2s; }
-.fl-card:hover { border-color: var(--green); box-shadow: 0 8px 24px rgba(18,64,42,.12); transform: translateY(-2px); }
+.fl-card { display: flex; flex-direction: column; gap: 6px; padding: 20px 22px; background: #fff; border: 1.5px solid var(--line); border-radius: 10px; box-shadow: 0 2px 8px rgba(18,64,42,.08); cursor: pointer; transition: border-color .2s, box-shadow .2s, transform .2s; }
+.fl-card:hover { border-color: var(--green); box-shadow: 0 10px 28px rgba(18,64,42,.16); transform: translateY(-3px); }
 .fl-card .fl-step { font-size: 11px; font-weight: 700; letter-spacing: .12em; color: var(--accent); }
 .fl-card .fl-title { font-weight: 700; font-size: 16px; color: var(--green-dark); }
-.fl-card .fl-text { font-size: 13px; color: var(--ink-soft); line-height: 1.7; }
-.fl-card .fl-more { margin-top: auto; padding-top: 6px; font-size: 13px; font-weight: 700; color: var(--green); }
+.fl-card .fl-text { font-size: 13px; color: var(--ink-soft); line-height: 1.7; margin-bottom: 12px; }
+.fl-card .fl-more { margin-top: auto; align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; padding: 8px 18px; border-radius: 999px; background: var(--green); color: #fff; font-size: 13px; font-weight: 700; transition: background .2s, gap .2s; }
+.fl-card .fl-more::after { content: "→"; transition: transform .2s; }
+.fl-card:hover .fl-more { background: var(--green-dark); }
+.fl-card:hover .fl-more::after { transform: translateX(4px); }
 .fl-card.guide { background: var(--green-pale); border-color: var(--green); }
 .check-list { list-style: none; margin-top: 8px; }
 .check-list li { padding-left: 32px; position: relative; margin-bottom: 14px; font-size: 15px; }
@@ -499,12 +502,12 @@ footer { background: var(--green-dark); color: #cfe0d5; padding: 48px 0 32px; fo
       <h3>機能ごとに詳しく見る</h3>
       <p class="fl-lead">青果卸売市場の業務の流れに沿って、vegework でできることを紹介しています。</p>
       <div class="fl-grid">
-        <a class="fl-card guide" href="seika-shijou-system.html"><span class="fl-step">はじめての方へ</span><span class="fl-title">青果市場システムとは？</span><span class="fl-text">業務の流れ、販売管理システムとの違い、選び方のポイント</span><span class="fl-more">詳しく見る →</span></a>
-        <a class="fl-card" href="niuke-system.html"><span class="fl-step">STEP 1</span><span class="fl-title">荷受（入荷）</span><span class="fl-text">入荷の登録、過去の入荷のコピー、出荷データの取り込み</span><span class="fl-more">詳しく見る →</span></a>
-        <a class="fl-card" href="bunka-system.html"><span class="fl-step">STEP 2</span><span class="fl-title">分荷</span><span class="fl-text">カードとマトリクスで入力、よく分荷する買人を候補に表示</span><span class="fl-more">詳しく見る →</span></a>
-        <a class="fl-card" href="shikiri-system.html"><span class="fl-step">STEP 3</span><span class="fl-title">仕切</span><span class="fl-text">売り切ってからの本仕切、段仕切、荷主ごとの控除の自動計算</span><span class="fl-more">詳しく見る →</span></a>
-        <a class="fl-card" href="kakaku-system.html"><span class="fl-step">STEP 4</span><span class="fl-title">価格登録・承認</span><span class="fl-text">売値と利益をその場で計算、上長はひと目で確認して一括承認</span><span class="fl-more">詳しく見る →</span></a>
-        <a class="fl-card" href="chohyo-system.html"><span class="fl-step">STEP 5</span><span class="fl-title">帳票</span><span class="fl-text">分荷票・送り状・販売票・仕切票を入力からそのまま出力</span><span class="fl-more">詳しく見る →</span></a>
+        <a class="fl-card guide" href="seika-shijou-system.html"><span class="fl-step">はじめての方へ</span><span class="fl-title">青果市場システムとは？</span><span class="fl-text">業務の流れ、販売管理システムとの違い、選び方のポイント</span><span class="fl-more">詳しく見る</span></a>
+        <a class="fl-card" href="niuke-system.html"><span class="fl-step">STEP 1</span><span class="fl-title">荷受（入荷）</span><span class="fl-text">入荷の登録、過去の入荷のコピー、出荷データの取り込み</span><span class="fl-more">詳しく見る</span></a>
+        <a class="fl-card" href="bunka-system.html"><span class="fl-step">STEP 2</span><span class="fl-title">分荷</span><span class="fl-text">カードとマトリクスで入力、よく分荷する買人を候補に表示</span><span class="fl-more">詳しく見る</span></a>
+        <a class="fl-card" href="shikiri-system.html"><span class="fl-step">STEP 3</span><span class="fl-title">仕切</span><span class="fl-text">売り切ってからの本仕切、段仕切、荷主ごとの控除の自動計算</span><span class="fl-more">詳しく見る</span></a>
+        <a class="fl-card" href="kakaku-system.html"><span class="fl-step">STEP 4</span><span class="fl-title">価格登録・承認</span><span class="fl-text">売値と利益をその場で計算、上長はひと目で確認して一括承認</span><span class="fl-more">詳しく見る</span></a>
+        <a class="fl-card" href="chohyo-system.html"><span class="fl-step">STEP 5</span><span class="fl-title">帳票</span><span class="fl-text">分荷票・送り状・販売票・仕切票を入力からそのまま出力</span><span class="fl-more">詳しく見る</span></a>
       </div>
     </div>
   </div>

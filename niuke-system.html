@@ -116,9 +116,14 @@ th { background: var(--green-pale); color: var(--green-dark); white-space: nowra
 td:first-child { white-space: nowrap; }
 td:first-child { white-space: nowrap; }
 .sign { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--line); text-align: right; font-size: 14px; color: var(--ink-soft); }
-.about { margin-top: 32px; background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 20px 24px; font-size: 14px; }
+.about { display: block; margin-top: 32px; background: var(--green-pale); border: 1.5px solid var(--green); border-radius: 10px; padding: 22px 24px; font-size: 14px; color: inherit; text-decoration: none; box-shadow: 0 2px 8px rgba(18,64,42,.08); cursor: pointer; transition: box-shadow .2s, transform .2s; }
+.about:hover { box-shadow: 0 10px 28px rgba(18,64,42,.16); transform: translateY(-2px); }
 .about p { font-size: 14px; margin: 0; }
-.about a { display: inline-block; margin-top: 8px; color: var(--green); font-weight: 700; white-space: nowrap; }
+.about .about-btn { display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; padding: 10px 22px; border-radius: 999px; background: var(--green); color: #fff; font-weight: 700; white-space: nowrap; transition: background .2s; }
+.about .about-btn::after { content: "→"; transition: transform .2s; }
+.about:hover .about-btn { background: var(--green-dark); }
+.about:hover .about-btn::after { transform: translateX(4px); }
+@media (max-width: 400px) { .about .about-btn { white-space: normal; } }
 .col-nav { margin-top: 48px; }
 .col-nav h2 { margin: 0 0 16px; font-size: 18px; }
 .col-nav ul { list-style: none; margin: 0; border-top: 1px solid var(--line); }
@@ -208,9 +213,10 @@ footer a { color: #fff; text-decoration: underline; margin: 0 10px; }
 <p>入荷は価格登録へ送るまで入荷一覧に残り、担当者ごとに表示されます。未処理の入荷がひと目でわかるので、処理漏れを防げます。</p>
 </div>
 
-<div class="about">
-<p>荷受のシステム化や、今の送り状・荷受の流れに合うかどうかのご相談も承っています。お気軽にお問い合わせください。<br><a href="/#contact">資料請求・お問い合わせはこちら →</a></p>
-</div>
+<a class="about" href="/#contact">
+<p>荷受のシステム化や、今の送り状・荷受の流れに合うかどうかのご相談も承っています。お気軽にお問い合わせください。</p>
+<span class="about-btn">資料請求・お問い合わせはこちら</span>
+</a>
 </article>
 
 <nav class="col-nav" aria-label="関連ページ">

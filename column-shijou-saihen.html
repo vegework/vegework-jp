@@ -75,9 +75,14 @@ table { width: 100%; min-width: 520px; border-collapse: collapse; }
 th, td { border: 1px solid var(--line); padding: 10px 14px; text-align: left; vertical-align: top; }
 th { background: var(--green-pale); color: var(--green-dark); white-space: nowrap; }
 .sign { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--line); text-align: right; font-size: 14px; color: var(--ink-soft); }
-.about { margin-top: 32px; background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 20px 24px; font-size: 14px; }
+.about { display: block; margin-top: 32px; background: var(--green-pale); border: 1.5px solid var(--green); border-radius: 10px; padding: 22px 24px; font-size: 14px; color: inherit; text-decoration: none; box-shadow: 0 2px 8px rgba(18,64,42,.08); cursor: pointer; transition: box-shadow .2s, transform .2s; }
+.about:hover { box-shadow: 0 10px 28px rgba(18,64,42,.16); transform: translateY(-2px); }
 .about p { font-size: 14px; margin: 0; }
-.about a { display: inline-block; margin-top: 8px; color: var(--green); font-weight: 700; white-space: nowrap; }
+.about .about-btn { display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; padding: 10px 22px; border-radius: 999px; background: var(--green); color: #fff; font-weight: 700; white-space: nowrap; transition: background .2s; }
+.about .about-btn::after { content: "→"; transition: transform .2s; }
+.about:hover .about-btn { background: var(--green-dark); }
+.about:hover .about-btn::after { transform: translateX(4px); }
+@media (max-width: 400px) { .about .about-btn { white-space: normal; } }
 .col-nav { margin-top: 48px; }
 .col-nav h2 { margin: 0 0 16px; font-size: 18px; }
 .col-nav ul { list-style: none; margin: 0; border-top: 1px solid var(--line); }
@@ -204,9 +209,10 @@ footer a { color: #fff; text-decoration: underline; margin: 0 10px; }
 
 <p class="sign">株式会社ベジワーク　代表取締役　一ツ木 崇之</p>
 
-<div class="about">
-<p>株式会社ベジワークは、青果卸売市場向けの営業管理SaaS「vegework」を開発・提供しています。市場ごとに異なる業務のやり方はそのままに、仕組みだけを変えることを目指しています。<br><a href="/#contact">お問い合わせはこちら →</a></p>
-</div>
+<a class="about" href="/#contact">
+<p>株式会社ベジワークは、青果卸売市場向けの営業管理SaaS「vegework」を開発・提供しています。市場ごとに異なる業務のやり方はそのままに、仕組みだけを変えることを目指しています。</p>
+<span class="about-btn">お問い合わせはこちら</span>
+</a>
 </article>
 
 <nav class="col-nav" aria-label="コラム一覧">

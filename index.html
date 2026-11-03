@@ -39,16 +39,9 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<script>
-// 日本語フォントはファイルが多いので、ページを読み終えてから読み込む（携帯での最初の表示を速くするため）
-addEventListener('load', () => {
-  const l = document.createElement('link');
-  l.rel = 'stylesheet';
-  l.href = 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@700;900&display=swap';
-  document.head.appendChild(l);
-});
-</script>
-<noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@700;900&display=swap" rel="stylesheet"></noscript>
+<!-- 日本語の Web フォントはファイルが多いので、携帯では読まずに端末の字体（iPhone はヒラギノ、Android は Noto）を使う -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@700;900&display=swap" rel="stylesheet" media="print" onload="this.media='(min-width: 768px)'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@700;900&display=swap" rel="stylesheet" media="(min-width: 768px)"></noscript>
 <link rel="icon" type="image/png" href="assets/img/icon.png">
 <style>
 :root {
@@ -61,8 +54,8 @@ addEventListener('load', () => {
   --bg-alt: #f5f7f4;
   --line: #dde4de;
   --accent: #c8842c;
-  --serif: "Noto Serif JP", serif;
-  --sans: "Noto Sans JP", sans-serif;
+  --serif: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  --sans: "Noto Sans JP", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 [hidden] { display: none !important; }
